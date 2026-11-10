@@ -1,0 +1,35 @@
+---
+interface Props {
+  nombre: keyof typeof trazos;
+  clase?: string;
+}
+const { nombre, clase = '' } = Astro.props;
+const trazos = {
+  pin: 'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z',
+  shield: 'M12 2c3 2 6 3 9 3v7c0 5-5 9-9 11-4-2-9-6-9-11V5c3 0 6-1 9-3Z',
+  tree: 'M12 22V10m0 6-4-3m4 1 4-4M7 18a5 5 0 0 1-3-9 6 6 0 0 1 12-3 5 5 0 0 1 4 8 5 5 0 0 1-6 4',
+  road: 'M6 2 1 22M18 2l5 20M12 2v4m0 4v4m0 4v4',
+  people:
+    'M9 21v-3a5 5 0 0 1 10 0v3M1 21v-3a5 5 0 0 1 5-5m14 0a5 5 0 0 1 4 5v3M18 6a4 4 0 1 1-8 0 4 4 0 0 1 8 0ZM6 10a3 3 0 1 1 0-6m15 0a3 3 0 0 1 0 6',
+  whatsapp:
+    'M21 11.5a9 9 0 0 1-13.5 8L2 21l1.5-5.5A9 9 0 1 1 21 11.5ZM8 7c-2 3 2 7 5 8l2-2-3-1-1 1-2-2 1-1-2-3Z',
+  leaf: 'M4 21C3 8 8 3 22 3c0 14-5 19-15 15M2 23 16 9m-9 9v-7m0 7h7',
+  arrow: 'M4 12h16m-5-5 5 5-5 5',
+};
+---
+
+<svg
+  class={clase}
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  aria-hidden="true"
+>
+  <path d={trazos[nombre]} />
+</svg>

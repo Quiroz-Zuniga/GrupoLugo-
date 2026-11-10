@@ -1,0 +1,92 @@
+{
+  "slug": "residencial-1",
+  "nombre": "Residencial 1",
+  "orden": 1,
+  "publicado": true,
+  "zona": "Apartado 1 · Zona 1",
+  "ubicacion": "Apartado 1 · Ubicación de Residencial 1",
+  "estado": "disponible",
+  "apartado1": {
+    "etiqueta": "Apartado 1 · Portada",
+    "titulo": "Residencial 1",
+    "subtitulo": "Apartado 1: Portada y presentación inicial de Residencial 1",
+    "ubicacion": "Apartado 1: Ubicación y entorno geográfico de Residencial 1",
+    "estadoTexto": "Apartado 1: Maqueta activa · Datos comerciales por confirmar",
+    "botonCta": "Apartado 1: Consultar disponibilidad"
+  },
+  "apartado2": {
+    "etiqueta": "Apartado 2 · Sobre el proyecto",
+    "titulo": "Apartado 2: Descripción y concepto de Residencial 1",
+    "descripcion": "Apartado 2: Este espacio presenta la información general y conceptual de Residencial 1. Se detallará el propósito del desarrollo, el tipo de lotificación y las ventajas del entorno cuando Grupo Lugo oficialice los datos.",
+    "frase": "Apartado 2: «Juntos construyendo mejores comunidades»."
+  },
+  "apartado3": {
+    "etiqueta": "Apartado 3 · Características",
+    "titulo": "Apartado 3: Atributos y servicios de Residencial 1",
+    "items": [
+      {
+        "icono": "pin",
+        "titulo": "Apartado 3.1: Ubicación",
+        "texto": "Apartado 3.1: Información reservada para vías de acceso y cercanía a puntos de interés."
+      },
+      {
+        "icono": "shield",
+        "titulo": "Apartado 3.2: Seguridad",
+        "texto": "Apartado 3.2: Información reservada para perímetro y control de acceso."
+      },
+      {
+        "icono": "tree",
+        "titulo": "Apartado 3.3: Áreas verdes",
+        "texto": "Apartado 3.3: Información reservada para parques y espacios naturales protegidos."
+      },
+      {
+        "icono": "road",
+        "titulo": "Apartado 3.4: Vialidad y servicios",
+        "texto": "Apartado 3.4: Información reservada para calles, agua y red eléctrica."
+      },
+      {
+        "icono": "people",
+        "titulo": "Apartado 3.5: Comunidad",
+        "texto": "Apartado 3.5: Información reservada para convivencia familiar y desarrollo ordenado."
+      }
+    ]
+  },
+  "apartado4": {
+    "etiqueta": "Apartado 4 · Galería",
+    "titulo": "Apartado 4: Galería visual y planos de Residencial 1",
+    "descripcion": "Apartado 4: Registro de espacios reservados para fotografía de campo, renders y planos del proyecto.",
+    "items": [
+      {
+        "numero": "4.1",
+        "titulo": "Apartado 4.1: Fachada y pórtico",
+        "texto": "Espacio asignado para render o foto de entrada principal."
+      },
+      {
+        "numero": "4.2",
+        "titulo": "Apartado 4.2: Plano maestro de lotes",
+        "texto": "Espacio asignado para plano general de lotificación y distribución."
+      },
+      {
+        "numero": "4.3",
+        "titulo": "Apartado 4.3: Áreas recreativas",
+        "texto": "Espacio asignado para visualización de parques y áreas verdes."
+      },
+      {
+        "numero": "4.4",
+        "titulo": "Apartado 4.4: Topografía y entorno",
+        "texto": "Espacio asignado para fotografías aéreas o panorámicas del terreno."
+      }
+    ]
+  },
+  "apartado5": {
+    "etiqueta": "Apartado 5 · Contacto",
+    "pregunta": "¿Te interesa recibir información sobre Residencial 1?",
+    "titulo": "Apartado 5: Atención directa por WhatsApp",
+    "texto": "Apartado 5: Nuestro equipo brindará información oficial sobre Residencial 1 en cuanto esté disponible.",
+    "boton": "Apartado 5: Preguntar por Residencial 1"
+  },
+  "seo": {
+    "title": "Residencial 1 | Grupo Lugo",
+    "description": "Maqueta oficial de Residencial 1 de Grupo Lugo. Apartados 1 al 5 con estructura de desarrollo y lotificación."
+  }
+}

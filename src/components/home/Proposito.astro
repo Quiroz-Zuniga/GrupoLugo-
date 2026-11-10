@@ -1,0 +1,52 @@
+---
+const { contenido } = Astro.props;
+---
+
+<section class="purpose" id="proposito" aria-labelledby="titulo-proposito">
+  <div class="container">
+    <span class="eyebrow">{contenido.etiqueta}</span>
+    <h2 id="titulo-proposito">{contenido.titulo}</h2>
+    <div class="purpose-grid">
+      <article>
+        <h3>{contenido.misionTitulo}</h3>
+        <p>{contenido.mision}</p>
+      </article>
+      <article>
+        <h3>{contenido.visionTitulo}</h3>
+        <p>{contenido.vision}</p>
+      </article>
+    </div>
+  </div>
+</section>
+<style>
+  .purpose {
+    background: var(--beis-50);
+    padding-block: var(--s-16);
+  }
+  h2 {
+    max-width: 650px;
+  }
+  .purpose-grid {
+    display: grid;
+    gap: var(--s-8);
+    margin-top: var(--s-8);
+  }
+  article {
+    border-top: 1px solid var(--almendra-400);
+    padding-top: var(--s-6);
+  }
+  h3 {
+    color: var(--esmeralda-700);
+    font-size: 1.35rem;
+  }
+  article p {
+    margin-top: var(--s-4);
+    max-width: 60ch;
+  }
+  @media (min-width: 768px) {
+    .purpose-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s-16);
+    }
+  }
+</style>

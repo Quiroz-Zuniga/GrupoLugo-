@@ -1,0 +1,93 @@
+---
+import { getImage } from 'astro:assets';
+import logo from '../assets/logo/grupo-lugo-transparente.png';
+import { createHash } from 'node:crypto';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { sitio } from '../config/sitio';
+import '../styles/global.css';
+const { proyecto, seo = proyecto?.seo, whatsapp } = Astro.props;
+const canonical = sitio.dominio
+  ? new URL(Astro.url.pathname, sitio.dominio).href
+  : null;
+const og = await getImage({
+  src: proyecto?.hero || logo,
+  width: 1200,
+  height: 630,
+  fit: 'contain',
+  format: 'png',
+});
+const ogUrl = sitio.dominio ? new URL(og.src, sitio.dominio).href : og.src;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      name: sitio.nombre,
+      ...(sitio.dominio ? { url: sitio.dominio } : {}),
+      ...(sitio.whatsapp ? { telephone: `+${sitio.whatsapp}` } : {}),
+    },
+    ...(canonical
+      ? [
+          {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: sitio.nombre,
+                item: canonical,
+              },
+            ],
+          },
+        ]
+      : []),
+  ],
+};
+const jsonLd = JSON.stringify(structuredData);
+Astro.csp?.insertScriptHash(
+  `sha256-${createHash('sha256').update(jsonLd).digest('base64')}`,
+);
+---
+
+<!doctype html>
+<html lang="es-HN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b2b21" />
+    <title>{seo.title}</title>
+    <meta name="description" content={seo.description} />
+    {canonical ? (
+      <link rel="canonical" href={canonical} />
+    ) : (
+      <meta name="robots" content="noindex,nofollow" />
+    )}
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_HN" />
+    <meta property="og:site_name" content={sitio.nombre} />
+    <meta property="og:title" content={seo.title} />
+    <meta property="og:description" content={seo.description} />
+    <meta property="og:image" content={ogUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={sitio.etiquetas.logoAlt} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={seo.title} />
+    <meta name="twitter:description" content={seo.description} />
+    <meta name="twitter:image" content={ogUrl} />
+    <script type="application/ld+json" set:html={jsonLd} />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">
+      {sitio.etiquetas.saltar}
+    </a>
+    <Header whatsapp={whatsapp} />
+    <main id="contenido">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

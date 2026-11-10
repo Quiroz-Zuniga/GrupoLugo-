@@ -1,0 +1,76 @@
+---
+import Icono from '../Icono.astro';
+interface Props {
+  contenido: import('astro:content').CollectionEntry<'institucional'>['data']['actividades'];
+}
+const { contenido } = Astro.props;
+---
+
+<section
+  class="activities"
+  id="actividades"
+  aria-labelledby="titulo-actividades"
+>
+  <div class="container">
+    <span class="eyebrow">{contenido.etiqueta}</span>
+    <h2 id="titulo-actividades">{contenido.titulo}</h2>
+    <div class="activities-grid">
+      {contenido.items.map((item) => (
+        <article>
+          <Icono nombre={item.icono} />
+          <h3>{item.titulo}</h3>
+          <p>{item.texto}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .activities {
+    background: var(--olivo-50);
+    padding-block: var(--s-12);
+  }
+  .activities-grid {
+    display: grid;
+    gap: var(--s-8);
+    margin-top: var(--s-8);
+  }
+  article :global(svg) {
+    width: 36px;
+    height: 36px;
+    color: var(--esmeralda-700);
+    margin-bottom: var(--s-4);
+  }
+  h3 {
+    font-size: 1.125rem;
+    max-width: 230px;
+  }
+  article p {
+    margin-top: var(--s-3);
+    font-size: var(--text-sm);
+    color: var(--tierra-700);
+    max-width: 32ch;
+  }
+  @media (min-width: 480px) {
+    .activities-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 1024px) {
+    .activities-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0;
+    }
+    article {
+      padding-inline: var(--s-8);
+      border-left: 1px solid var(--almendra-200);
+    }
+    article:first-child {
+      padding-left: 0;
+      border-left: 0;
+    }
+    article:last-child {
+      padding-right: 0;
+    }
+  }
+</style>

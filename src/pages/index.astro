@@ -1,0 +1,26 @@
+---
+import { getEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import HeroInstitucional from '../components/home/HeroInstitucional.astro';
+import Historia from '../components/home/Historia.astro';
+import Actividades from '../components/home/Actividades.astro';
+import Proposito from '../components/home/Proposito.astro';
+import Valores from '../components/home/Valores.astro';
+import ContactoInstitucional from '../components/home/ContactoInstitucional.astro';
+import { sitio } from '../config/sitio';
+import { enlaceWhatsappInstitucional } from '../lib/whatsapp';
+const empresa = await getEntry('institucional', 'grupo-lugo');
+if (!empresa)
+  throw new Error('Falta el contenido institucional de Grupo Lugo.');
+const contenido = empresa.data;
+const whatsapp = enlaceWhatsappInstitucional(sitio.whatsapp);
+---
+
+<Layout seo={contenido.seo} whatsapp={whatsapp}>
+  <HeroInstitucional contenido={contenido.hero} />
+  <Historia contenido={contenido.historia} />
+  <Actividades contenido={contenido.actividades} />
+  <Proposito contenido={contenido.proposito} />
+  <Valores contenido={contenido.valores} />
+  <ContactoInstitucional contenido={contenido.contacto} whatsapp={whatsapp} />
+</Layout>

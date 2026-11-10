@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo/grupo-lugo-transparente.png';
+import { sitio } from '../config/sitio';
+---
+
+<a class="marca" href="/#inicio" aria-label={sitio.nombre}>
+  <Image
+    src={logo}
+    width={80}
+    height={97}
+    alt={sitio.etiquetas.logoAlt}
+    loading="eager"
+  />
+  <span>{sitio.descriptor}</span>
+</a>
+<style>
+  .marca {
+    display: flex;
+    align-items: center;
+    gap: var(--s-4);
+    text-decoration: none;
+  }
+  .marca img {
+    width: 64px;
+    height: 78px;
+    object-fit: contain;
+  }
+  .marca span {
+    max-width: 110px;
+    font-size: var(--text-xs);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    line-height: 1.6;
+  }
+  @media (max-width: 767px) {
+    .marca span {
+      display: none;
+    }
+  }
+</style>

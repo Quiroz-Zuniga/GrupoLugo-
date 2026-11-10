@@ -1,0 +1,138 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo/grupo-lugo-transparente.png';
+import { sitio } from '../config/sitio';
+---
+
+<footer class="footer dark">
+  <div class="container">
+    <div class="footer-grid">
+      <a class="footer-logo" href="/#inicio" aria-label={sitio.nombre}>
+        <Image
+          src={logo}
+          alt={sitio.etiquetas.logoAlt}
+          width={90}
+          height={109}
+          loading="lazy"
+        />
+      </a>
+      <div>
+        <h2>{sitio.etiquetas.residenciales}</h2>
+        <nav aria-label="Residenciales en pie de página">
+          {sitio.residenciales.map((res) => (
+            <a href={res.href}>{res.texto}</a>
+          ))}
+        </nav>
+      </div>
+      <div>
+        <h2>{sitio.etiquetas.navegacion}</h2>
+        <nav aria-label="Pie de página">
+          {sitio.menu.map((item) => (
+            <a href={item.href}>{item.texto}</a>
+          ))}
+        </nav>
+      </div>
+      <div class="footer-contact">
+        <h2>{sitio.etiquetas.contacto}</h2>
+        {sitio.whatsapp ? (
+          <a href={`tel:+${sitio.whatsapp}`}>+{sitio.whatsapp}</a>
+        ) : (
+          <p>{sitio.cta.botonPendiente}</p>
+        )}
+        {sitio.correo && <a href={`mailto:${sitio.correo}`}>{sitio.correo}</a>}
+        <p>{sitio.descriptor}</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-motto">{sitio.etiquetas.empresa}</p>
+      <div class="copyright">
+        © {new Date().getFullYear()} {sitio.nombre}. {sitio.etiquetas.derechos}
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--esmeralda-900);
+    border-top: 1px solid color-mix(in srgb, var(--blanco) 30%, transparent);
+    color: var(--blanco);
+    padding-block: var(--s-12) var(--s-8);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--s-8);
+  }
+  .footer-logo {
+    width: fit-content;
+    align-self: start;
+  }
+  .footer-logo img {
+    width: 76px;
+    height: 92px;
+    object-fit: contain;
+  }
+  h2 {
+    font-size: var(--text-sm);
+    margin-bottom: var(--s-3);
+    font-weight: 500;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  nav a,
+  .footer-contact a {
+    font-size: var(--text-sm);
+    text-decoration: none;
+    min-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--beis-100);
+  }
+  nav a:hover,
+  .footer-contact a:hover {
+    text-decoration: underline;
+  }
+  .footer-contact p {
+    font-size: var(--text-sm);
+    color: var(--beis-100);
+    max-width: 220px;
+  }
+  .footer-bottom {
+    margin-top: var(--s-8);
+    border-top: 1px solid color-mix(in srgb, var(--blanco) 20%, transparent);
+    padding-top: var(--s-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
+  }
+  .footer-motto {
+    color: var(--beis-100);
+    font-size: var(--text-sm);
+  }
+  .copyright {
+    color: var(--beis-100);
+    font-size: var(--text-xs);
+    opacity: 0.8;
+  }
+
+  @media (min-width: 640px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+    }
+    .footer-bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+</style>

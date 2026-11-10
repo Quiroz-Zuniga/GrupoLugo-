@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "create-component": {
+      "source": "incluud/astro-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/create-component/SKILL.md",
+      "computedHash": "695279ff82aa4d07a1345afcde08f2ad3cf0d0d9903953b89d7141a59ababb51"
+    }
+  }
+}

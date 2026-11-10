@@ -1,0 +1,68 @@
+---
+import Icono from '../Icono.astro';
+const { contenido, whatsapp } = Astro.props;
+---
+
+<section
+  class="corporate-contact dark"
+  id="contacto"
+  aria-labelledby="titulo-contacto"
+>
+  <div class="container contact-grid">
+    <div>
+      <span class="eyebrow">{contenido.etiqueta}</span>
+      <h2 id="titulo-contacto">{contenido.titulo}</h2>
+      <p>{contenido.descripcion}</p>
+    </div>
+    <div>
+      {whatsapp ? (
+        <a
+          class="button"
+          href={whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Icono nombre="whatsapp" />
+          {contenido.boton}
+          <Icono nombre="arrow" />
+        </a>
+      ) : (
+        <p class="contact-pending">{contenido.pendiente}</p>
+      )}
+    </div>
+  </div>
+</section>
+<style>
+  .corporate-contact {
+    background: var(--esmeralda-700);
+    color: var(--blanco);
+    padding-block: var(--s-12);
+  }
+  .contact-grid {
+    display: grid;
+    gap: var(--s-8);
+    align-items: center;
+  }
+  .corporate-contact p {
+    color: var(--blanco);
+    margin-top: var(--s-4);
+    max-width: 480px;
+  }
+  .button {
+    background: var(--esmeralda-900);
+  }
+  .button:hover {
+    background: var(--tierra-900);
+  }
+  .contact-pending {
+    border-left: 1px solid var(--almendra-200);
+    padding-left: var(--s-6);
+    font-size: var(--text-sm);
+  }
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1.4fr 1fr;
+      gap: var(--s-16);
+    }
+  }
+</style>

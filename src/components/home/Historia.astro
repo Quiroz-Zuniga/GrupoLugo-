@@ -1,0 +1,81 @@
+---
+interface Props {
+  contenido: import('astro:content').CollectionEntry<'institucional'>['data']['historia'];
+}
+const { contenido } = Astro.props;
+---
+
+<section class="history" id="nosotros" aria-labelledby="titulo-historia">
+  <div class="container history-grid">
+    <div class="history-intro">
+      <span class="eyebrow">{contenido.etiqueta}</span>
+      <h2 id="titulo-historia">{contenido.titulo}</h2>
+      <p>{contenido.introduccion}</p>
+    </div>
+    <div class="history-stages">
+      {contenido.etapas.map((etapa) => (
+        <article>
+          <h3>{etapa.titulo}</h3>
+          <p>{etapa.texto}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .history {
+    background: var(--blanco);
+    padding-block: var(--s-16);
+  }
+  .history-grid {
+    display: grid;
+    gap: var(--s-12);
+  }
+  .history-intro h2 {
+    max-width: 440px;
+  }
+  .history-intro p {
+    margin-top: var(--s-6);
+    max-width: 50ch;
+  }
+  .history-stages {
+    border-left: 1px solid var(--almendra-200);
+    padding-left: var(--s-6);
+  }
+  article {
+    position: relative;
+    padding-bottom: var(--s-8);
+  }
+  article:last-child {
+    padding-bottom: 0;
+  }
+  article::before {
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--s-6) - 4px);
+    top: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: var(--pill);
+    background: var(--terracota-600);
+  }
+  h3 {
+    font-size: 1.125rem;
+    color: var(--esmeralda-700);
+  }
+  article p {
+    margin-top: var(--s-3);
+    font-size: var(--text-body);
+  }
+  @media (min-width: 768px) {
+    .history-grid {
+      grid-template-columns: 1fr 1.4fr;
+      gap: var(--s-16);
+    }
+    .history-intro {
+      align-self: start;
+      position: sticky;
+      top: calc(var(--header-height) + var(--s-8));
+    }
+  }
+</style>

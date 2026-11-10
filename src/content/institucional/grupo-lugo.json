@@ -1,0 +1,101 @@
+{
+  "nombre": "Grupo Lugo",
+  "hero": {
+    "etiqueta": "Tradición familiar · Honduras",
+    "titulo": "Una tradición familiar que continúa creciendo.",
+    "descripcion": "Desarrollamos proyectos de lotificación y urbanización con compromiso, transparencia y responsabilidad, impulsando el patrimonio de las familias y el progreso de nuestras comunidades.",
+    "boton": "Conoce nuestra historia",
+    "dato": "100",
+    "datoPrefijo": "Más de",
+    "datoDescripcion": "años de raíces familiares en Honduras"
+  },
+  "historia": {
+    "etiqueta": "Nuestra historia",
+    "titulo": "De nuestras raíces al futuro de las comunidades",
+    "introduccion": "Grupo Lugo nace de una tradición familiar que ha crecido junto a Honduras, desde la ganadería y el comercio hasta los bienes raíces, la urbanización y la construcción.",
+    "etapas": [
+      {
+        "titulo": "Nuestras raíces en Olancho",
+        "texto": "Hace más de 100 años, el bisabuelo de la familia comenzó con la crianza de ganado y la adquisición de sus primeras propiedades en Cacao, Azacualpa, Olancho."
+      },
+      {
+        "titulo": "Una familia que crece en Danlí",
+        "texto": "Con el paso de las generaciones, la familia extendió sus actividades al departamento de El Paraíso y centró sus actividades comerciales en Danlí, con la compra y venta de ganado —cría, repasto y leche—, café y granos básicos."
+      },
+      {
+        "titulo": "Un nuevo camino en los años 2000",
+        "texto": "Alrededor de los años 2000, uno de los socios principales y su esposa preservaron el legado comercial y ganadero e incursionaron en los bienes raíces, la urbanización y la construcción. Con la incorporación de sus hijos, estas actividades se consolidaron bajo el nombre de Grupo Lugo."
+      },
+      {
+        "titulo": "El legado continúa",
+        "texto": "Actualmente, Grupo Lugo mantiene sus raíces y continúa desarrollándose en ganadería, bienes raíces, compra y venta de café y cooperativa de préstamos, como parte de una tradición familiar que sigue creciendo."
+      }
+    ]
+  },
+  "actividades": {
+    "etiqueta": "Lo que hacemos",
+    "titulo": "Diversas actividades, una misma tradición",
+    "items": [
+      {
+        "titulo": "Bienes raíces y urbanización",
+        "texto": "Desarrollo de proyectos de lotificación y una trayectoria familiar en urbanización y construcción.",
+        "icono": "road"
+      },
+      {
+        "titulo": "Ganadería",
+        "texto": "Las raíces de nuestra familia: cría de ganado, repasto y producción de leche.",
+        "icono": "leaf"
+      },
+      {
+        "titulo": "Compra y venta de café",
+        "texto": "Una actividad comercial que forma parte del crecimiento de la empresa familiar.",
+        "icono": "tree"
+      },
+      {
+        "titulo": "Cooperativa de préstamos",
+        "texto": "Parte de las actividades que Grupo Lugo desarrolla actualmente.",
+        "icono": "people"
+      }
+    ]
+  },
+  "proposito": {
+    "etiqueta": "Nuestro propósito",
+    "titulo": "Comprometidos con el patrimonio de las familias",
+    "misionTitulo": "Nuestra misión",
+    "mision": "Somos una empresa dedicada al desarrollo de proyectos de lotificación innovadores, accesibles y de calidad, que brinda a nuestros clientes la oportunidad de adquirir terrenos seguros, con alto potencial de crecimiento y que contribuyan a la construcción de su patrimonio. Trabajamos con compromiso, transparencia y responsabilidad, impulsando el desarrollo urbano y el progreso de nuestras comunidades.",
+    "visionTitulo": "Nuestra visión",
+    "vision": "Ser una empresa líder en el desarrollo de proyectos de urbanización en Honduras, capaz de brindar a nuestros clientes la confianza y seguridad de lograr el sueño de sus casas; reconocida por la calidad e innovación, contribuyendo a la construcción de comunidades prósperas y al crecimiento del patrimonio de las familias."
+  },
+  "valores": {
+    "etiqueta": "Nuestros valores",
+    "titulo": "Lo que guía nuestro trabajo",
+    "items": [
+      "Respeto",
+      "Honestidad",
+      "Seguridad",
+      "Compromiso",
+      "Calidad",
+      "Integridad",
+      "Transparencia",
+      "Innovación",
+      "Responsabilidad social y ambiental",
+      "Crecimiento"
+    ]
+  },
+  "contacto": {
+    "etiqueta": "Conversemos",
+    "titulo": "Conoce más de Grupo Lugo",
+    "descripcion": "Consulta con nuestro equipo sobre la empresa y sus proyectos de lotificación.",
+    "pendiente": "Próximamente compartiremos nuestros canales oficiales de contacto.",
+    "boton": "Enviar mensaje por WhatsApp"
+  },
+  "seo": {
+    "title": "Grupo Lugo | Lotificación y urbanización en Honduras",
+    "description": "Conoce Grupo Lugo: historia familiar, misión, visión y valores. Proyectos de lotificación y urbanización en Honduras con compromiso y transparencia."
+  },
+  "fuente": "Documento institucional proporcionado por el cliente. La referencia visual no es fuente de contenido.",
+  "pendientes": [
+    "TODO(contenido): teléfono, correo, redes y dominio oficiales.",
+    "TODO(contenido): fotografías corporativas originales antes de incorporar material fotográfico."
+  ]
+}

@@ -1,0 +1,125 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/logo/grupo-lugo-transparente.png';
+import { sitio } from '../../config/sitio';
+const { contenido } = Astro.props;
+---
+
+<section id="inicio" class="institutional-hero" aria-labelledby="titulo-inicio">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">{contenido.etiqueta}</span>
+      <h1 id="titulo-inicio">{sitio.nombre}</h1>
+      <p class="hero-title">{contenido.titulo}</p>
+      <p class="hero-description">{contenido.descripcion}</p>
+      <a class="button" href="#nosotros">
+        {contenido.boton}
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <div class="hero-identity">
+      <Image
+        src={logo}
+        alt={sitio.etiquetas.logoAlt}
+        width={300}
+        height={364}
+        loading="eager"
+        fetchpriority="high"
+      />
+      <p class="hero-roots">
+        <span>{contenido.datoPrefijo}</span>
+        <strong>{contenido.dato}</strong>
+        <span>{contenido.datoDescripcion}</span>
+      </p>
+    </div>
+  </div>
+</section>
+<style>
+  .institutional-hero {
+    background: var(--beis-50);
+    padding-block: var(--s-16);
+    border-bottom: 1px solid var(--almendra-200);
+  }
+  .hero-grid {
+    display: grid;
+    gap: var(--s-12);
+    align-items: center;
+  }
+  .hero-copy {
+    max-width: 720px;
+  }
+  h1 {
+    font-family: var(--font-hero);
+    font-size: clamp(4rem, 8vw, 7rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-block: var(--s-4);
+  }
+  .hero-title {
+    font-family: var(--font-hero);
+    font-size: clamp(1.9rem, 3vw, 2.6rem);
+    line-height: 1.15;
+    color: var(--esmeralda-700);
+    max-width: 580px;
+  }
+  .hero-description {
+    margin-block: var(--s-6);
+    max-width: 58ch;
+  }
+  .hero-identity {
+    display: flex;
+    align-items: center;
+    gap: var(--s-8);
+    border-top: 1px solid var(--almendra-200);
+    padding-top: var(--s-8);
+  }
+  .hero-identity img {
+    width: 110px;
+    height: auto;
+  }
+  .hero-roots {
+    color: var(--esmeralda-900);
+    font-size: var(--text-sm);
+    line-height: 1.4;
+    max-width: 160px;
+  }
+  .hero-roots span {
+    display: block;
+  }
+  .hero-roots strong {
+    display: block;
+    font-family: var(--font-hero);
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 1.1;
+    color: var(--olivo-600);
+  }
+  @media (min-width: 768px) {
+    .hero-grid {
+      grid-template-columns: 1.7fr 1fr;
+      gap: var(--s-16);
+    }
+    .hero-identity {
+      border-top: 0;
+      border-left: 1px solid var(--almendra-200);
+      padding: var(--s-4) 0 var(--s-4) var(--s-12);
+      flex-direction: column;
+      align-items: center;
+      gap: var(--s-8);
+    }
+    .hero-identity img {
+      width: 180px;
+    }
+    .hero-roots {
+      text-align: center;
+      max-width: 200px;
+    }
+    .hero-roots strong {
+      font-size: 5rem;
+    }
+    .institutional-hero {
+      padding-block: var(--s-16);
+    }
+  }
+</style>
