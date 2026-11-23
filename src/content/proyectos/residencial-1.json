@@ -1,92 +1,97 @@
 {
   "slug": "residencial-1",
-  "nombre": "Residencial 1",
+  "nombre": "Residencial Ciudad Victoria",
   "orden": 1,
   "publicado": true,
-  "zona": "Apartado 1 · Zona 1",
-  "ubicacion": "Apartado 1 · Ubicación de Residencial 1",
+  "zona": "Danlí",
+  "ubicacion": "El Pescadero, Danlí, Honduras",
   "estado": "disponible",
   "apartado1": {
-    "etiqueta": "Apartado 1 · Portada",
-    "titulo": "Residencial 1",
-    "subtitulo": "Apartado 1: Portada y presentación inicial de Residencial 1",
-    "ubicacion": "Apartado 1: Ubicación y entorno geográfico de Residencial 1",
-    "estadoTexto": "Apartado 1: Maqueta activa · Datos comerciales por confirmar",
-    "botonCta": "Apartado 1: Consultar disponibilidad"
+    "etiqueta": "Proyectos / Danlí",
+    "titulo": "Residencial Ciudad Victoria",
+    "subtitulo": "Tu espacio, tu futuro",
+    "ubicacion": "El Pescadero, Danlí",
+    "estadoTexto": "Conoce nuestro residencial",
+    "botonCta": "Contáctanos por WhatsApp"
   },
   "apartado2": {
-    "etiqueta": "Apartado 2 · Sobre el proyecto",
-    "titulo": "Apartado 2: Descripción y concepto de Residencial 1",
-    "descripcion": "Apartado 2: Este espacio presenta la información general y conceptual de Residencial 1. Se detallará el propósito del desarrollo, el tipo de lotificación y las ventajas del entorno cuando Grupo Lugo oficialice los datos.",
-    "frase": "Apartado 2: «Juntos construyendo mejores comunidades»."
+    "etiqueta": "Sobre el proyecto",
+    "titulo": "Tu espacio, tu futuro",
+    "descripcion": "Residencial Ciudad Victoria es un desarrollo de lotificación ubicado en El Pescadero, Danlí, con una excelente ubicación, acceso cómodo y un entorno seguro. Aquí encontrarás el lugar ideal para construir la casa de tus sueños, rodeado de naturaleza, tranquilidad y una comunidad en crecimiento.",
+    "frase": "Un lugar donde tus sueños toman forma"
   },
   "apartado3": {
-    "etiqueta": "Apartado 3 · Características",
-    "titulo": "Apartado 3: Atributos y servicios de Residencial 1",
+    "etiqueta": "Características",
+    "titulo": "Características de nuestro residencial",
     "items": [
       {
         "icono": "pin",
-        "titulo": "Apartado 3.1: Ubicación",
-        "texto": "Apartado 3.1: Información reservada para vías de acceso y cercanía a puntos de interés."
+        "titulo": "Ubicación privilegiada",
+        "texto": "En El Pescadero, Danlí."
       },
       {
         "icono": "shield",
-        "titulo": "Apartado 3.2: Seguridad",
-        "texto": "Apartado 3.2: Información reservada para perímetro y control de acceso."
+        "titulo": "Seguridad",
+        "texto": "Acceso controlado y vigilancia."
       },
       {
         "icono": "tree",
-        "titulo": "Apartado 3.3: Áreas verdes",
-        "texto": "Apartado 3.3: Información reservada para parques y espacios naturales protegidos."
+        "titulo": "Áreas verdes",
+        "texto": "Entorno natural y saludable."
       },
       {
         "icono": "road",
-        "titulo": "Apartado 3.4: Vialidad y servicios",
-        "texto": "Apartado 3.4: Información reservada para calles, agua y red eléctrica."
+        "titulo": "Calles pavimentadas",
+        "texto": "Con todos los servicios básicos."
       },
       {
         "icono": "people",
-        "titulo": "Apartado 3.5: Comunidad",
-        "texto": "Apartado 3.5: Información reservada para convivencia familiar y desarrollo ordenado."
+        "titulo": "Comunidad en crecimiento",
+        "texto": "Un excelente lugar para tu familia."
       }
     ]
   },
   "apartado4": {
-    "etiqueta": "Apartado 4 · Galería",
-    "titulo": "Apartado 4: Galería visual y planos de Residencial 1",
-    "descripcion": "Apartado 4: Registro de espacios reservados para fotografía de campo, renders y planos del proyecto.",
+    "etiqueta": "Galería",
+    "titulo": "Conoce nuestro residencial",
+    "descripcion": "Descubre los espacios, paisajes y áreas que forman parte de Residencial Ciudad Victoria.",
     "items": [
       {
         "numero": "4.1",
-        "titulo": "Apartado 4.1: Fachada y pórtico",
-        "texto": "Espacio asignado para render o foto de entrada principal."
+        "titulo": "Entrada principal",
+        "texto": "Conoce el acceso principal de Residencial Ciudad Victoria."
       },
       {
         "numero": "4.2",
-        "titulo": "Apartado 4.2: Plano maestro de lotes",
-        "texto": "Espacio asignado para plano general de lotificación y distribución."
+        "titulo": "Calles y avenidas",
+        "texto": "Espacios de circulación y acceso dentro del residencial."
       },
       {
         "numero": "4.3",
-        "titulo": "Apartado 4.3: Áreas recreativas",
-        "texto": "Espacio asignado para visualización de parques y áreas verdes."
+        "titulo": "Vista aérea",
+        "texto": "Conoce la distribución y extensión del proyecto."
       },
       {
         "numero": "4.4",
-        "titulo": "Apartado 4.4: Topografía y entorno",
-        "texto": "Espacio asignado para fotografías aéreas o panorámicas del terreno."
+        "titulo": "Áreas recreativas",
+        "texto": "Espacios verdes para disfrutar en familia."
+      },
+      {
+        "numero": "4.5",
+        "titulo": "Entorno natural",
+        "texto": "Disfruta de la tranquilidad y los paisajes de la zona."
       }
     ]
   },
   "apartado5": {
-    "etiqueta": "Apartado 5 · Contacto",
-    "pregunta": "¿Te interesa recibir información sobre Residencial 1?",
-    "titulo": "Apartado 5: Atención directa por WhatsApp",
-    "texto": "Apartado 5: Nuestro equipo brindará información oficial sobre Residencial 1 en cuanto esté disponible.",
-    "boton": "Apartado 5: Preguntar por Residencial 1"
+    "etiqueta": "Contacto",
+    "pregunta": "¿Te gustaría conocer más de este proyecto?",
+    "titulo": "Contáctanos por WhatsApp",
+    "texto": "Nuestro equipo está listo para brindarte más información sobre disponibilidad, medidas y ubicaciones.",
+    "boton": "Enviar mensaje por WhatsApp"
   },
   "seo": {
-    "title": "Residencial 1 | Grupo Lugo",
-    "description": "Maqueta oficial de Residencial 1 de Grupo Lugo. Apartados 1 al 5 con estructura de desarrollo y lotificación."
+  "title": "Residencial Ciudad Victoria | Grupo Lugo",
+  "description": "Conoce Residencial Ciudad Victoria en El Pescadero, Danlí. Descubre el proyecto y solicita información a Grupo Lugo."
   }
 }

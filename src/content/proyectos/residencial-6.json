@@ -1,92 +1,93 @@
+
 {
   "slug": "residencial-6",
-  "nombre": "Residencial 6",
+  "nombre": "Residencial Villa Campestre II Etapa",
   "orden": 6,
   "publicado": true,
-  "zona": "Apartado 1 · Zona 6",
-  "ubicacion": "Apartado 1 · Ubicación de Residencial 6",
+  "zona": "Danlí",
+  "ubicacion": "Por Motel Adelaida, El Pescadero, Danlí, El Paraíso",
   "estado": "disponible",
   "apartado1": {
-    "etiqueta": "Apartado 1 · Portada",
-    "titulo": "Residencial 6",
-    "subtitulo": "Apartado 1: Portada y presentación inicial de Residencial 6",
-    "ubicacion": "Apartado 1: Ubicación y entorno geográfico de Residencial 6",
-    "estadoTexto": "Apartado 1: Maqueta activa · Datos comerciales por confirmar",
-    "botonCta": "Apartado 1: Consultar disponibilidad"
+    "etiqueta": "Proyectos / Danlí",
+    "titulo": "Residencial Villa Campestre II Etapa",
+    "subtitulo": "Tu espacio, tu futuro",
+    "ubicacion": "Por Motel Adelaida, El Pescadero, Danlí, El Paraíso",
+    "estadoTexto": "Conoce nuestro proyecto",
+    "botonCta": "Contáctanos por WhatsApp"
   },
   "apartado2": {
-    "etiqueta": "Apartado 2 · Sobre el proyecto",
-    "titulo": "Apartado 2: Descripción y concepto de Residencial 6",
-    "descripcion": "Apartado 2: Este espacio presenta la información general y conceptual de Residencial 6. Se detallará el propósito del desarrollo, el tipo de lotificación y las ventajas del entorno cuando Grupo Lugo oficialice los datos.",
-    "frase": "Apartado 2: «Juntos construyendo mejores comunidades»."
+    "etiqueta": "Sobre el proyecto",
+    "titulo": "Tu espacio, tu futuro",
+    "descripcion": "Residencial Villa Campestre II Etapa es un proyecto ubicado en la zona de El Pescadero, Danlí, por Motel Adelaida. Una nueva etapa del desarrollo Villa Campestre de Grupo Lugo, pensada para quienes buscan un lugar donde construir su hogar y continuar haciendo realidad sus sueños.",
+    "frase": "El lugar donde tus sueños siguen creciendo"
   },
   "apartado3": {
-    "etiqueta": "Apartado 3 · Características",
-    "titulo": "Apartado 3: Atributos y servicios de Residencial 6",
+    "etiqueta": "Características",
+    "titulo": "Características de nuestra residencial",
     "items": [
       {
         "icono": "pin",
-        "titulo": "Apartado 3.1: Ubicación",
-        "texto": "Apartado 3.1: Información reservada para vías de acceso y cercanía a puntos de interés."
+        "titulo": "Ubicación",
+        "texto": "En la zona de El Pescadero, Danlí, por Motel Adelaida."
       },
       {
         "icono": "shield",
-        "titulo": "Apartado 3.2: Seguridad",
-        "texto": "Apartado 3.2: Información reservada para perímetro y control de acceso."
+        "titulo": "Proyecto residencial",
+        "texto": "Una nueva etapa del desarrollo Villa Campestre de Grupo Lugo."
       },
       {
         "icono": "tree",
-        "titulo": "Apartado 3.3: Áreas verdes",
-        "texto": "Apartado 3.3: Información reservada para parques y espacios naturales protegidos."
+        "titulo": "Entorno",
+        "texto": "Un espacio para quienes buscan comenzar una nueva etapa."
       },
       {
         "icono": "road",
-        "titulo": "Apartado 3.4: Vialidad y servicios",
-        "texto": "Apartado 3.4: Información reservada para calles, agua y red eléctrica."
+        "titulo": "Desarrollo residencial",
+        "texto": "Conoce la propuesta de Villa Campestre II Etapa."
       },
       {
         "icono": "people",
-        "titulo": "Apartado 3.5: Comunidad",
-        "texto": "Apartado 3.5: Información reservada para convivencia familiar y desarrollo ordenado."
+        "titulo": "Tu futuro hogar",
+        "texto": "Un proyecto pensado para construir nuevos sueños y experiencias."
       }
     ]
   },
   "apartado4": {
-    "etiqueta": "Apartado 4 · Galería",
-    "titulo": "Apartado 4: Galería visual y planos de Residencial 6",
-    "descripcion": "Apartado 4: Registro de espacios reservados para fotografía de campo, renders y planos del proyecto.",
+    "etiqueta": "Galería",
+    "titulo": "Conoce nuestra residencial",
+    "descripcion": "Descubre Residencial Villa Campestre II Etapa y conoce más sobre este proyecto.",
     "items": [
       {
-        "numero": "4.1",
-        "titulo": "Apartado 4.1: Fachada y pórtico",
-        "texto": "Espacio asignado para render o foto de entrada principal."
+        "numero": "01",
+        "titulo": "Vista del proyecto",
+        "texto": "Conoce la propuesta de Residencial Villa Campestre II Etapa."
       },
       {
-        "numero": "4.2",
-        "titulo": "Apartado 4.2: Plano maestro de lotes",
-        "texto": "Espacio asignado para plano general de lotificación y distribución."
+        "numero": "02",
+        "titulo": "Ubicación",
+        "texto": "Conoce el sector de El Pescadero, Danlí."
       },
       {
-        "numero": "4.3",
-        "titulo": "Apartado 4.3: Áreas recreativas",
-        "texto": "Espacio asignado para visualización de parques y áreas verdes."
+        "numero": "03",
+        "titulo": "Distribución de lotes",
+        "texto": "Descubre la propuesta de lotificación del proyecto."
       },
       {
-        "numero": "4.4",
-        "titulo": "Apartado 4.4: Topografía y entorno",
-        "texto": "Espacio asignado para fotografías aéreas o panorámicas del terreno."
+        "numero": "04",
+        "titulo": "Entorno residencial",
+        "texto": "Conoce el entorno donde se desarrolla el proyecto."
       }
     ]
   },
   "apartado5": {
-    "etiqueta": "Apartado 5 · Contacto",
-    "pregunta": "¿Te interesa recibir información sobre Residencial 6?",
-    "titulo": "Apartado 5: Atención directa por WhatsApp",
-    "texto": "Apartado 5: Nuestro equipo brindará información oficial sobre Residencial 6 en cuanto esté disponible.",
-    "boton": "Apartado 5: Preguntar por Residencial 6"
+    "etiqueta": "Contacto",
+    "pregunta": "¿Te gustaría conocer Villa Campestre II Etapa?",
+    "titulo": "Estamos para ayudarte",
+    "texto": "Comunícate con nuestro equipo y solicita información sobre Residencial Villa Campestre II Etapa.",
+    "boton": "Solicitar información"
   },
   "seo": {
-    "title": "Residencial 6 | Grupo Lugo",
-    "description": "Maqueta oficial de Residencial 6 de Grupo Lugo. Apartados 1 al 5 con estructura de desarrollo y lotificación."
+    "title": "Residencial Villa Campestre II Etapa | Grupo Lugo",
+    "description": "Conoce Villa Campestre II Etapa, por Motel Adelaida, en El Pescadero, Danlí. Descubre este proyecto de Grupo Lugo."
   }
 }

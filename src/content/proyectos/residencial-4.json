@@ -1,92 +1,95 @@
+
 {
   "slug": "residencial-4",
-  "nombre": "Residencial 4",
+  "nombre": "Residencial El Sauce II Etapa",
   "orden": 4,
   "publicado": true,
-  "zona": "Apartado 1 · Zona 4",
-  "ubicacion": "Apartado 1 · Ubicación de Residencial 4",
-  "estado": "disponible",
+  "zona": "Danlí",
+  "ubicacion": "Por The Children's World School, Danlí, El Paraíso",
+  "estado": "ultimos-lotes",
   "apartado1": {
-    "etiqueta": "Apartado 1 · Portada",
-    "titulo": "Residencial 4",
-    "subtitulo": "Apartado 1: Portada y presentación inicial de Residencial 4",
-    "ubicacion": "Apartado 1: Ubicación y entorno geográfico de Residencial 4",
-    "estadoTexto": "Apartado 1: Maqueta activa · Datos comerciales por confirmar",
-    "botonCta": "Apartado 1: Consultar disponibilidad"
+    "etiqueta": "Proyectos / Danlí",
+    "titulo": "Residencial El Sauce II Etapa",
+    "subtitulo": "Tu espacio, tu futuro",
+    "ubicacion": "Por The Children's World School, Danlí, El Paraíso",
+    "estadoTexto": "Conoce nuestro proyecto",
+    "botonCta": "Contáctanos por WhatsApp"
   },
   "apartado2": {
-    "etiqueta": "Apartado 2 · Sobre el proyecto",
-    "titulo": "Apartado 2: Descripción y concepto de Residencial 4",
-    "descripcion": "Apartado 2: Este espacio presenta la información general y conceptual de Residencial 4. Se detallará el propósito del desarrollo, el tipo de lotificación y las ventajas del entorno cuando Grupo Lugo oficialice los datos.",
-    "frase": "Apartado 2: «Juntos construyendo mejores comunidades»."
+    "etiqueta": "Sobre el proyecto",
+    "titulo": "Tu espacio, tu futuro",
+    "descripcion": "Residencial El Sauce II Etapa es un proyecto ubicado en Danlí, El Paraíso, por The Children's World School. Es una residencial completamente desarrollada y habitada, en una zona segura, tranquila y de alta plusvalía. Un lugar pensado para quienes desean encontrar el espacio ideal para construir su hogar.",
+    "frase": "La tranquilidad de vivir donde siempre soñaste"
   },
   "apartado3": {
-    "etiqueta": "Apartado 3 · Características",
-    "titulo": "Apartado 3: Atributos y servicios de Residencial 4",
+    "etiqueta": "Características",
+    "titulo": "Características de nuestra residencial",
     "items": [
       {
         "icono": "pin",
-        "titulo": "Apartado 3.1: Ubicación",
-        "texto": "Apartado 3.1: Información reservada para vías de acceso y cercanía a puntos de interés."
+        "titulo": "Ubicación conveniente",
+        "texto": "Ubicada por The Children's World School, en Danlí, El Paraíso."
       },
       {
         "icono": "shield",
-        "titulo": "Apartado 3.2: Seguridad",
-        "texto": "Apartado 3.2: Información reservada para perímetro y control de acceso."
-      },
-      {
-        "icono": "tree",
-        "titulo": "Apartado 3.3: Áreas verdes",
-        "texto": "Apartado 3.3: Información reservada para parques y espacios naturales protegidos."
-      },
-      {
-        "icono": "road",
-        "titulo": "Apartado 3.4: Vialidad y servicios",
-        "texto": "Apartado 3.4: Información reservada para calles, agua y red eléctrica."
+        "titulo": "Zona segura",
+        "texto": "Un entorno tranquilo para disfrutar de tu hogar."
       },
       {
         "icono": "people",
-        "titulo": "Apartado 3.5: Comunidad",
-        "texto": "Apartado 3.5: Información reservada para convivencia familiar y desarrollo ordenado."
+        "titulo": "Residencial habitada",
+        "texto": "Un desarrollo completamente desarrollado y habitado."
+      },
+      {
+        "icono": "arrow",
+        "titulo": "Alta plusvalía",
+        "texto": "Ubicada en una zona con alto potencial de valorización."
+      },
+      {
+        "icono": "leaf",
+        "titulo": "Últimos lotes disponibles",
+        "texto": "Aprovecha la oportunidad de adquirir uno de los últimos lotes."
       }
     ]
   },
   "apartado4": {
-    "etiqueta": "Apartado 4 · Galería",
-    "titulo": "Apartado 4: Galería visual y planos de Residencial 4",
-    "descripcion": "Apartado 4: Registro de espacios reservados para fotografía de campo, renders y planos del proyecto.",
+    "etiqueta": "Galería",
+    "titulo": "Conoce nuestra residencial",
+    "descripcion": "Descubre Residencial El Sauce II Etapa y conoce su entorno, sus espacios y su desarrollo habitacional.",
     "items": [
       {
-        "numero": "4.1",
-        "titulo": "Apartado 4.1: Fachada y pórtico",
-        "texto": "Espacio asignado para render o foto de entrada principal."
+        "numero": "01",
+        "titulo": "Entrada principal",
+        "texto": "Conoce el acceso a Residencial El Sauce II Etapa."
       },
       {
-        "numero": "4.2",
-        "titulo": "Apartado 4.2: Plano maestro de lotes",
-        "texto": "Espacio asignado para plano general de lotificación y distribución."
+        "numero": "02",
+        "titulo": "Calles y avenidas",
+        "texto": "Conoce las calles y espacios de circulación del residencial."
       },
       {
-        "numero": "4.3",
-        "titulo": "Apartado 4.3: Áreas recreativas",
-        "texto": "Espacio asignado para visualización de parques y áreas verdes."
+        "numero": "03",
+        "titulo": "Entorno residencial",
+        "texto": "Descubre el entorno de una residencial completamente habitada."
       },
       {
-        "numero": "4.4",
-        "titulo": "Apartado 4.4: Topografía y entorno",
-        "texto": "Espacio asignado para fotografías aéreas o panorámicas del terreno."
+        "numero": "04",
+        "titulo": "Ubicación del proyecto",
+        "texto": "Conoce la ubicación y los alrededores del residencial."
       }
     ]
   },
   "apartado5": {
-    "etiqueta": "Apartado 5 · Contacto",
-    "pregunta": "¿Te interesa recibir información sobre Residencial 4?",
-    "titulo": "Apartado 5: Atención directa por WhatsApp",
-    "texto": "Apartado 5: Nuestro equipo brindará información oficial sobre Residencial 4 en cuanto esté disponible.",
-    "boton": "Apartado 5: Preguntar por Residencial 4"
+    "etiqueta": "Contacto",
+    "pregunta": "¿Te gustaría adquirir uno de los últimos lotes?",
+    "titulo": "Tu nuevo hogar puede comenzar aquí",
+    "texto": "Comunícate con nuestro equipo y recibe información sobre los últimos lotes disponibles en Residencial El Sauce II Etapa.",
+    "boton": "Consultar disponibilidad"
   },
   "seo": {
-    "title": "Residencial 4 | Grupo Lugo",
-    "description": "Maqueta oficial de Residencial 4 de Grupo Lugo. Apartados 1 al 5 con estructura de desarrollo y lotificación."
+    "title": "Residencial El Sauce II Etapa | Grupo Lugo",
+    "description": "Conoce Residencial El Sauce II Etapa en Danlí, por The Children's World School. ¡Últimos lotes disponibles con Grupo Lugo!"
   }
 }
+
+
