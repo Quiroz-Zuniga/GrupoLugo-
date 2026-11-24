@@ -8,7 +8,7 @@ const { contenido, whatsapp } = Astro.props;
   id="contacto"
   aria-labelledby="titulo-contacto"
 >
-  <div class="container contact-grid">
+  <div class="container contact-grid anim-reveal">
     <div>
       <span class="eyebrow">{contenido.etiqueta}</span>
       <h2 id="titulo-contacto">{contenido.titulo}</h2>
@@ -36,7 +36,18 @@ const { contenido, whatsapp } = Astro.props;
   .corporate-contact {
     background: var(--esmeralda-700);
     color: var(--blanco);
-    padding-block: var(--s-12);
+    padding-block: var(--s-16);
+    border-top: 3px solid var(--olivo-600);
+  }
+  .corporate-contact .eyebrow {
+    color: var(--almendra-200);
+  }
+  h2 {
+    font-family: var(--font-hero);
+    font-size: clamp(2.15rem, 3.4vw, 3rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--blanco);
   }
   .contact-grid {
     display: grid;
@@ -44,20 +55,27 @@ const { contenido, whatsapp } = Astro.props;
     align-items: center;
   }
   .corporate-contact p {
-    color: var(--blanco);
+    color: var(--beis-50);
     margin-top: var(--s-4);
-    max-width: 480px;
+    max-width: 52ch;
+    line-height: 1.65;
   }
   .button {
     background: var(--esmeralda-900);
+    border-color: rgba(255, 255, 255, 0.25);
   }
   .button:hover {
     background: var(--tierra-900);
+    border-color: rgba(255, 255, 255, 0.45);
   }
   .contact-pending {
-    border-left: 1px solid var(--almendra-200);
-    padding-left: var(--s-6);
+    background: rgba(11, 43, 33, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-left: 3px solid var(--almendra-400);
+    border-radius: var(--radius);
+    padding: var(--s-5) var(--s-6);
     font-size: var(--text-sm);
+    color: var(--beis-100);
   }
   @media (min-width: 768px) {
     .contact-grid {

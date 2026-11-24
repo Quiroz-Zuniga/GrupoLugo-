@@ -17,7 +17,9 @@ const { contenido } = Astro.props;
     <div class="activities-grid">
       {contenido.items.map((item) => (
         <article class="anim-reveal">
-          <Icono nombre={item.icono} />
+          <div class="activity-icon">
+            <Icono nombre={item.icono} />
+          </div>
           <h3>{item.titulo}</h3>
           <p>{item.texto}</p>
         </article>
@@ -28,39 +30,79 @@ const { contenido } = Astro.props;
 <style>
   .activities {
     background: var(--olivo-50);
-    padding-block: var(--s-12);
+    padding-block: var(--s-16);
+    border-bottom: 1px solid var(--almendra-200);
+  }
+  .activities .eyebrow {
+    color: var(--terracota-700);
+  }
+  h2 {
+    font-family: var(--font-hero);
+    font-size: clamp(2.1rem, 3.4vw, 3rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--esmeralda-900);
+    max-width: 22ch;
   }
   .activities-grid {
     display: grid;
-    gap: var(--s-8);
-    margin-top: var(--s-8);
+    gap: var(--s-6);
+    margin-top: var(--s-12);
   }
-  article :global(svg) {
-    width: 36px;
-    height: 36px;
-    color: var(--esmeralda-700);
-    margin-bottom: var(--s-4);
+  article {
+    display: flex;
+    flex-direction: column;
     transition: transform var(--transition) cubic-bezier(0.22, 1, 0.36, 1);
   }
-  article:hover :global(svg) {
-    transform: translateY(-2px) scale(1.05);
+  .activity-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--pill);
+    background: var(--blanco);
+    border: 1px solid var(--almendra-200);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--esmeralda-700);
+    margin-bottom: var(--s-5);
+    transition:
+      background var(--transition) ease,
+      border-color var(--transition) ease,
+      transform var(--transition) cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .activity-icon :global(svg) {
+    width: 24px;
+    height: 24px;
+  }
+  article:hover .activity-icon {
+    background: var(--esmeralda-700);
+    border-color: var(--esmeralda-700);
+    color: var(--blanco);
+    transform: translateY(-2px);
   }
   h3 {
-    font-size: 1.125rem;
-    max-width: 230px;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--esmeralda-900);
+    max-width: 24ch;
   }
   article p {
     margin-top: var(--s-3);
     font-size: var(--text-sm);
     color: var(--tierra-700);
-    max-width: 32ch;
+    line-height: 1.65;
+    max-width: 34ch;
   }
   @media (min-width: 480px) {
     .activities-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--s-8);
     }
   }
   @media (min-width: 1024px) {
+    .activities {
+      padding-block: var(--s-24);
+    }
     .activities-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 0;

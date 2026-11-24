@@ -76,7 +76,6 @@ const whatsapp = enlaceWhatsappInstitucional(sitio.whatsapp);
                   sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   loading="lazy"
                 />
-                <span class="card-number">0{item.orden}</span>
                 <span class:list={['card-badge', `badge-${item.estado}`]}>
                   {etiquetasEstado[item.estado]}
                 </span>
@@ -115,7 +114,8 @@ const whatsapp = enlaceWhatsappInstitucional(sitio.whatsapp);
     overflow: hidden;
     background: var(--esmeralda-900);
     color: var(--blanco);
-    padding-block: var(--s-12) var(--s-16);
+    padding-top: calc(var(--header-height) + var(--s-12));
+    padding-bottom: var(--s-16);
     border-bottom: 3px solid var(--olivo-600);
   }
   .hero-bg {
@@ -200,18 +200,20 @@ const whatsapp = enlaceWhatsappInstitucional(sitio.whatsapp);
   .project-card {
     background: var(--blanco);
     border: 1px solid var(--almendra-200);
-    border-radius: var(--radius);
+    border-radius: 12px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 4px 16px rgba(58, 42, 29, 0.04);
+    box-shadow: 0 6px 20px rgba(58, 42, 29, 0.05);
     transition:
-      transform var(--transition),
-      box-shadow var(--transition);
+      transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 240ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color var(--transition);
   }
   .project-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(11, 43, 33, 0.08);
+    border-color: var(--esmeralda-700);
+    box-shadow: 0 14px 30px rgba(11, 43, 33, 0.1);
   }
   .card-visual {
     aspect-ratio: 16 / 9;
@@ -284,7 +286,10 @@ const whatsapp = enlaceWhatsappInstitucional(sitio.whatsapp);
     margin-bottom: var(--s-2);
   }
   .card-body h2 {
-    font-size: 1.375rem;
+    font-family: var(--font-hero);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.15;
     color: var(--esmeralda-900);
   }
   .card-body h2 a {

@@ -86,14 +86,14 @@ export default function GaleriaLightbox({ items, proyectoNombre }) {
                 height={item.height}
                 loading="lazy"
               />
-              <span className="gallery-number">{item.numero}</span>
+              <div className="gallery-scrim" aria-hidden="true" />
               <span className="gallery-zoom-tag" aria-hidden="true">
-                Ampliar
+                Ampliar ↗
               </span>
-            </div>
-            <div className="gallery-info">
-              <h3>{item.titulo}</h3>
-              <p>{item.texto}</p>
+              <div className="gallery-info">
+                <h3>{item.titulo}</h3>
+                <p>{item.texto}</p>
+              </div>
             </div>
           </button>
         ))}

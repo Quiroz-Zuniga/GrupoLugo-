@@ -12,15 +12,22 @@ const residenciales = (await getCollection('proyectos'))
 <footer class="footer dark">
   <div class="container">
     <div class="footer-grid">
-      <a class="footer-logo" href="/#inicio" aria-label={sitio.nombre}>
-        <Image
-          src={logo}
-          alt={sitio.etiquetas.logoAlt}
-          width={90}
-          height={109}
-          loading="lazy"
-        />
-      </a>
+      <div class="footer-brand">
+        <a class="footer-logo" href="/#inicio" aria-label={sitio.nombre}>
+          <Image
+            src={logo}
+            alt={sitio.etiquetas.logoAlt}
+            width={90}
+            height={109}
+            loading="lazy"
+          />
+          <span>
+            <strong>{sitio.nombre}</strong>
+            <small>{sitio.descriptor}</small>
+          </span>
+        </a>
+        <p class="footer-brand-note">{sitio.etiquetas.empresa}</p>
+      </div>
       <div>
         <h2>{sitio.etiquetas.residenciales}</h2>
         <nav aria-label="Residenciales en pie de página">
@@ -61,68 +68,115 @@ const residenciales = (await getCollection('proyectos'))
 <style>
   .footer {
     background: var(--esmeralda-900);
-    border-top: 1px solid color-mix(in srgb, var(--blanco) 30%, transparent);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
     color: var(--blanco);
-    padding-block: var(--s-12) var(--s-8);
+    padding-block: var(--s-16) var(--s-8);
   }
   .footer-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--s-8);
   }
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-4);
+  }
   .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-4);
     width: fit-content;
-    align-self: start;
+    text-decoration: none;
   }
   .footer-logo img {
-    width: 76px;
-    height: 92px;
+    width: 60px;
+    height: 73px;
     object-fit: contain;
   }
-  h2 {
-    font-size: var(--text-sm);
-    margin-bottom: var(--s-3);
+  .footer-logo span {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .footer-logo strong {
+    font-size: 1rem;
     font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--blanco);
+  }
+  .footer-logo small {
+    font-size: var(--text-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--beis-100);
+    opacity: 0.8;
+  }
+  .footer-brand-note {
+    font-size: var(--text-sm);
+    color: var(--beis-100);
+    opacity: 0.85;
+    max-width: 28ch;
+  }
+  h2 {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--almendra-400);
+    margin-bottom: var(--s-4);
   }
   nav {
     display: flex;
     flex-direction: column;
     align-items: start;
+    gap: 2px;
   }
   nav a,
   .footer-contact a {
     font-size: var(--text-sm);
     text-decoration: none;
-    min-height: 30px;
+    min-height: 32px;
     display: inline-flex;
     align-items: center;
     color: var(--beis-100);
+    opacity: 0.82;
+    transition: opacity var(--transition) ease;
   }
   nav a:hover,
-  .footer-contact a:hover {
+  nav a:focus-visible,
+  .footer-contact a:hover,
+  .footer-contact a:focus-visible {
+    opacity: 1;
+    color: var(--blanco);
     text-decoration: underline;
+    text-underline-offset: 4px;
   }
   .footer-contact p {
     font-size: var(--text-sm);
     color: var(--beis-100);
-    max-width: 220px;
+    opacity: 0.85;
+    max-width: 24ch;
+    margin-bottom: var(--s-2);
   }
   .footer-bottom {
-    margin-top: var(--s-8);
-    border-top: 1px solid color-mix(in srgb, var(--blanco) 20%, transparent);
+    margin-top: var(--s-12);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
     padding-top: var(--s-6);
     display: flex;
     flex-direction: column;
-    gap: var(--s-4);
+    gap: var(--s-3);
   }
   .footer-motto {
     color: var(--beis-100);
     font-size: var(--text-sm);
+    opacity: 0.9;
   }
   .copyright {
     color: var(--beis-100);
     font-size: var(--text-xs);
-    opacity: 0.8;
+    opacity: 0.72;
   }
 
   @media (min-width: 640px) {
@@ -133,7 +187,12 @@ const residenciales = (await getCollection('proyectos'))
 
   @media (min-width: 1024px) {
     .footer-grid {
-      grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
+      grid-template-columns: 1.35fr 1.15fr 0.95fr 1fr;
+      gap: var(--s-12);
+    }
+    .footer-grid > div:not(.footer-brand) {
+      border-left: 1px solid rgba(255, 255, 255, 0.14);
+      padding-left: var(--s-8);
     }
     .footer-bottom {
       flex-direction: row;

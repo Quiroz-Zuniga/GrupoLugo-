@@ -1,127 +1,345 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '../../assets/logo/grupo-lugo-transparente.png';
+import portadaHero from '../../assets/proyectos/catalogo-hero.jpg';
+import Icono from '../Icono.astro';
 import { sitio } from '../../config/sitio';
+
 const { contenido } = Astro.props;
 ---
 
-<section id="inicio" class="institutional-hero" aria-labelledby="titulo-inicio">
-  <div class="container hero-grid">
-    <div class="hero-copy">
-      <span class="eyebrow anim-hero">{contenido.etiqueta}</span>
-      <h1 id="titulo-inicio" class="anim-hero-delay-1">
+<section
+  id="inicio"
+  class="institutional-hero dark"
+  aria-labelledby="titulo-inicio"
+>
+  <Image
+    src={portadaHero}
+    alt="Vista aérea ilustrativa de referencia de montañas y lotificación residencial en Honduras"
+    class="hero-bg anim-hero-bg"
+    widths={[768, 1280, 1920]}
+    sizes="100vw"
+    loading="eager"
+    fetchpriority="high"
+  />
+  <div class="hero-scrim" aria-hidden="true"></div>
+
+  <div class="container hero-stage">
+    <div class="hero-center">
+      <span class="hero-eyebrow anim-hero">{contenido.etiqueta}</span>
+
+      <h1 id="titulo-inicio" class="hero-display anim-hero-delay-1">
         {sitio.nombre}
       </h1>
-      <p class="hero-title anim-hero-delay-1">{contenido.titulo}</p>
+
+      <p class="hero-subtitle anim-hero-delay-2">{contenido.titulo}</p>
       <p class="hero-description anim-hero-delay-2">{contenido.descripcion}</p>
-      <a class="button anim-hero-delay-3" href="#nosotros">
-        {contenido.boton}
-        <span aria-hidden="true">↗</span>
-      </a>
+
+      <div class="hero-actions anim-hero-delay-3">
+        <a class="button hero-btn-primary" href="/proyectos">
+          <span>Ver residenciales</span>
+          <Icono nombre="arrow" />
+        </a>
+        <a class="button hero-btn-ghost" href="#nosotros">
+          <span>{contenido.boton}</span>
+        </a>
+      </div>
     </div>
-    <div class="hero-identity anim-hero-delay-2">
-      <Image
-        src={logo}
-        alt={sitio.etiquetas.logoAlt}
-        width={300}
-        height={364}
-        loading="eager"
-        fetchpriority="high"
-      />
+
+    <div class="hero-footer anim-hero-delay-3">
       <p class="hero-roots">
-        <span>{contenido.datoPrefijo}</span>
+        <span class="hero-roots-label">{contenido.datoPrefijo}</span>
         <strong>{contenido.dato}</strong>
-        <span>{contenido.datoDescripcion}</span>
+        <span class="hero-roots-desc">{contenido.datoDescripcion}</span>
       </p>
+
+      <a
+        href="#nosotros"
+        class="hero-scroll-cue"
+        aria-label="Desplazarse hacia nuestra historia"
+      >
+        <span class="hero-scroll-text">Desliza</span>
+        <span class="hero-scroll-track" aria-hidden="true">
+          <span class="hero-scroll-thumb"></span>
+        </span>
+      </a>
+
+      <span class="hero-ref-note">{sitio.etiquetas.imagenReferencia}</span>
     </div>
   </div>
 </section>
+
 <style>
   .institutional-hero {
-    background: var(--beis-50);
-    padding-block: var(--s-16);
-    border-bottom: 1px solid var(--almendra-200);
-  }
-  .hero-grid {
-    display: grid;
-    gap: var(--s-12);
-    align-items: center;
-  }
-  .hero-copy {
-    max-width: 720px;
-  }
-  h1 {
-    font-family: var(--font-hero);
-    font-size: clamp(4rem, 8vw, 7rem);
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
-    margin-block: var(--s-4);
-  }
-  .hero-title {
-    font-family: var(--font-hero);
-    font-size: clamp(1.9rem, 3vw, 2.6rem);
-    line-height: 1.15;
-    color: var(--esmeralda-700);
-    max-width: 580px;
-  }
-  .hero-description {
-    margin-block: var(--s-6);
-    max-width: 58ch;
-  }
-  .hero-identity {
+    position: relative;
+    min-height: min(100svh, 880px);
     display: flex;
+    flex-direction: column;
+    background: var(--esmeralda-900);
+    color: var(--blanco);
+    overflow: hidden;
+    border-bottom: 3px solid var(--olivo-600);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 42%;
+    z-index: 0;
+  }
+
+  .hero-scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(11, 43, 33, 0.72) 0%,
+        rgba(11, 43, 33, 0.34) 34%,
+        rgba(11, 43, 33, 0.48) 68%,
+        rgba(11, 43, 33, 0.84) 100%
+      ),
+      radial-gradient(
+        ellipse 72% 55% at 50% 48%,
+        rgba(11, 43, 33, 0.42) 0%,
+        rgba(11, 43, 33, 0.12) 100%
+      );
+  }
+
+  .hero-stage {
+    position: relative;
+    z-index: 2;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: calc(var(--header-height) + var(--s-12));
+    padding-bottom: var(--s-8);
+    gap: var(--s-12);
+  }
+
+  .hero-center {
+    margin-block: auto;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: var(--s-8);
-    border-top: 1px solid var(--almendra-200);
-    padding-top: var(--s-8);
+    text-align: center;
+    max-width: 820px;
+    margin-inline: auto;
+    padding-block: var(--s-6);
   }
-  .hero-identity img {
-    width: 110px;
-    height: auto;
+
+  .hero-eyebrow {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--beis-100);
+    text-shadow: 0 1px 8px rgba(11, 43, 33, 0.55);
+    margin-bottom: var(--s-4);
   }
-  .hero-roots {
-    color: var(--esmeralda-900);
-    font-size: var(--text-sm);
-    line-height: 1.4;
-    max-width: 160px;
-  }
-  .hero-roots span {
-    display: block;
-  }
-  .hero-roots strong {
-    display: block;
+
+  .hero-display {
     font-family: var(--font-hero);
+    font-size: clamp(3.4rem, 9.2vw, 7.25rem);
     font-weight: 400;
-    font-size: 4rem;
-    line-height: 1.1;
-    color: var(--olivo-600);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 0.98;
+    color: var(--blanco);
+    text-shadow: 0 4px 28px rgba(11, 43, 33, 0.48);
+    margin-bottom: var(--s-5);
   }
-  @media (min-width: 768px) {
-    .hero-grid {
-      grid-template-columns: 1.7fr 1fr;
-      gap: var(--s-16);
+
+  .hero-subtitle {
+    font-family: var(--font-hero);
+    font-size: clamp(1.45rem, 2.8vw, 2.2rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--beis-50);
+    max-width: 38ch;
+    text-shadow: 0 2px 14px rgba(11, 43, 33, 0.5);
+    margin-bottom: var(--s-4);
+  }
+
+  .hero-description {
+    font-size: var(--text-body);
+    color: var(--beis-100);
+    max-width: 58ch;
+    line-height: 1.6;
+    text-shadow: 0 1px 10px rgba(11, 43, 33, 0.55);
+    margin-bottom: var(--s-8);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--s-4);
+  }
+
+  .hero-btn-primary {
+    background: var(--esmeralda-700);
+    border-color: rgba(255, 255, 255, 0.22);
+    padding: var(--s-4) var(--s-6);
+    box-shadow: 0 8px 24px rgba(11, 43, 33, 0.32);
+  }
+
+  .hero-btn-primary:hover,
+  .hero-btn-primary:focus-visible {
+    background: var(--esmeralda-900);
+    border-color: rgba(255, 255, 255, 0.45);
+  }
+
+  .hero-btn-ghost {
+    background: rgba(11, 43, 33, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    color: var(--blanco);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: var(--s-4) var(--s-6);
+  }
+
+  .hero-btn-ghost:hover,
+  .hero-btn-ghost:focus-visible {
+    background: rgba(11, 43, 33, 0.78);
+    border-color: var(--blanco);
+    color: var(--blanco);
+  }
+
+  .hero-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--s-4);
+    padding-top: var(--s-5);
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+  }
+
+  .hero-roots {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--s-2);
+    color: var(--beis-50);
+    font-size: var(--text-sm);
+    line-height: 1.35;
+  }
+
+  .hero-roots strong {
+    font-family: var(--font-hero);
+    font-size: clamp(2rem, 3.2vw, 2.75rem);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--blanco);
+  }
+
+  .hero-roots-label,
+  .hero-roots-desc {
+    color: var(--beis-100);
+  }
+
+  .hero-ref-note {
+    font-size: var(--text-xs);
+    color: var(--beis-100);
+    background: rgba(11, 43, 33, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    padding: 4px 12px;
+    border-radius: var(--pill);
+  }
+
+  .hero-scroll-cue {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    min-height: 44px;
+    padding-inline: var(--s-2);
+    text-decoration: none;
+    color: var(--beis-100);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.9;
+    transition: opacity var(--transition) ease;
+  }
+
+  .hero-scroll-cue:hover,
+  .hero-scroll-cue:focus-visible {
+    opacity: 1;
+    color: var(--blanco);
+  }
+
+  .hero-scroll-track {
+    position: relative;
+    display: block;
+    width: 1px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.32);
+    overflow: hidden;
+  }
+
+  .hero-scroll-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background: var(--blanco);
+    animation: gl-scroll-cue 1.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  }
+
+  @keyframes gl-scroll-cue {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
     }
-    .hero-identity {
-      border-top: 0;
-      border-left: 1px solid var(--almendra-200);
-      padding: var(--s-4) 0 var(--s-4) var(--s-12);
+    35% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(250%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes gl-hero-scroll-out {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0.18;
+      transform: translateY(-28px);
+    }
+  }
+
+  @supports (animation-timeline: scroll()) {
+    .hero-center {
+      animation: gl-hero-scroll-out linear both;
+      animation-timeline: scroll(root);
+      animation-range: 40px 520px;
+    }
+  }
+
+  @media (max-width: 639px) {
+    .hero-stage {
+      padding-top: calc(var(--header-height) + var(--s-8));
+    }
+    .hero-actions {
+      width: 100%;
+    }
+    .hero-actions .button {
+      width: 100%;
+    }
+    .hero-footer {
       flex-direction: column;
-      align-items: center;
-      gap: var(--s-8);
-    }
-    .hero-identity img {
-      width: 180px;
-    }
-    .hero-roots {
-      text-align: center;
-      max-width: 200px;
-    }
-    .hero-roots strong {
-      font-size: 5rem;
-    }
-    .institutional-hero {
-      padding-block: var(--s-16);
+      align-items: flex-start;
     }
   }
 </style>

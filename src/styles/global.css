@@ -10,6 +10,26 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + var(--s-6));
+  overscroll-behavior-y: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--esmeralda-700) var(--beis-100);
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-track {
+  background: var(--beis-100);
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--esmeralda-700);
+  border-radius: var(--pill);
+  border: 2px solid var(--beis-100);
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: var(--esmeralda-900);
+}
+.scroll-progress {
+  display: none;
 }
 body {
   margin: 0;
@@ -190,17 +210,58 @@ summary:focus-visible {
   animation: gl-hero-bg 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+@keyframes gl-scroll-bar {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes gl-reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 60;
+    pointer-events: none;
+    background: var(--olivo-600);
+    transform-origin: left center;
+    transform: scaleX(0);
+    animation: gl-scroll-bar linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
 @supports (animation-timeline: view()) {
   .anim-reveal {
-    animation: gl-fade-up linear both;
+    animation: gl-reveal-up linear both;
     animation-timeline: view();
-    animation-range: entry 4% cover 24%;
+    animation-range: entry 5% cover 26%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+  .scroll-progress {
+    display: none;
   }
   *,
   *::before,

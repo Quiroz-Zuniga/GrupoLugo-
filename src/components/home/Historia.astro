@@ -26,50 +26,77 @@ const { contenido } = Astro.props;
   .history {
     background: var(--blanco);
     padding-block: var(--s-16);
+    border-bottom: 1px solid var(--almendra-200);
   }
   .history-grid {
     display: grid;
     gap: var(--s-12);
   }
+  .history-intro .eyebrow {
+    color: var(--terracota-700);
+  }
   .history-intro h2 {
-    max-width: 440px;
+    font-family: var(--font-hero);
+    font-size: clamp(2.15rem, 3.6vw, 3.15rem);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--esmeralda-900);
+    max-width: 14ch;
   }
   .history-intro p {
     margin-top: var(--s-6);
-    max-width: 50ch;
+    max-width: 44ch;
+    color: var(--tierra-700);
+    line-height: 1.7;
   }
   .history-stages {
-    border-left: 1px solid var(--almendra-200);
-    padding-left: var(--s-6);
+    display: flex;
+    flex-direction: column;
   }
   article {
     position: relative;
-    padding-bottom: var(--s-8);
+    padding-block: var(--s-6);
+    border-top: 1px solid var(--almendra-200);
+    transition: padding-left var(--transition) cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  article:first-child {
+    border-top: 2px solid var(--esmeralda-900);
   }
   article:last-child {
-    padding-bottom: 0;
+    border-bottom: 1px solid var(--almendra-200);
   }
-  article::before {
-    content: '';
-    position: absolute;
-    left: calc(-1 * var(--s-6) - 4px);
-    top: 5px;
-    width: 8px;
-    height: 8px;
-    border-radius: var(--pill);
-    background: var(--terracota-600);
+  article:hover {
+    padding-left: var(--s-3);
   }
   h3 {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
     font-size: 1.125rem;
-    color: var(--esmeralda-700);
+    font-weight: 600;
+    color: var(--esmeralda-900);
+  }
+  h3::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: var(--pill);
+    background: var(--terracota-600);
+    flex-shrink: 0;
   }
   article p {
     margin-top: var(--s-3);
     font-size: var(--text-body);
+    color: var(--tierra-900);
+    max-width: 58ch;
   }
   @media (min-width: 768px) {
+    .history {
+      padding-block: var(--s-24);
+    }
     .history-grid {
-      grid-template-columns: 1fr 1.4fr;
+      grid-template-columns: 0.95fr 1.25fr;
       gap: var(--s-16);
     }
     .history-intro {

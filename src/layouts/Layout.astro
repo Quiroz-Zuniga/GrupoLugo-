@@ -6,7 +6,12 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { sitio } from '../config/sitio';
 import '../styles/global.css';
-const { proyecto, seo = proyecto?.seo, whatsapp } = Astro.props;
+const {
+  proyecto,
+  seo = proyecto?.seo,
+  whatsapp,
+  overlayHeader = true,
+} = Astro.props;
 const canonical = sitio.dominio
   ? new URL(Astro.url.pathname, sitio.dominio).href
   : null;
@@ -81,10 +86,11 @@ Astro.csp?.insertScriptHash(
     <script type="application/ld+json" set:html={jsonLd} />
   </head>
   <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
     <a class="skip-link" href="#contenido">
       {sitio.etiquetas.saltar}
     </a>
-    <Header whatsapp={whatsapp} />
+    <Header whatsapp={whatsapp} overlay={overlayHeader} />
     <main id="contenido">
       <slot />
     </main>

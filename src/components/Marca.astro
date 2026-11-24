@@ -2,9 +2,19 @@
 import { Image } from 'astro:assets';
 import logo from '../assets/logo/grupo-lugo-transparente.png';
 import { sitio } from '../config/sitio';
+
+interface Props {
+  overlay?: boolean;
+}
+
+const { overlay = false } = Astro.props;
 ---
 
-<a class="marca" href="/#inicio" aria-label={sitio.nombre}>
+<a
+  class:list={['marca', { 'marca--overlay': overlay }]}
+  href="/#inicio"
+  aria-label={sitio.nombre}
+>
   <Image
     src={logo}
     width={64}
@@ -12,7 +22,10 @@ import { sitio } from '../config/sitio';
     alt={sitio.etiquetas.logoAlt}
     loading="eager"
   />
-  <span>{sitio.descriptor}</span>
+  <span class="marca-texto">
+    <span class="marca-nombre">{sitio.nombre}</span>
+    <span class="marca-descriptor">{sitio.descriptor}</span>
+  </span>
 </a>
 <style>
   .marca {
@@ -23,28 +36,57 @@ import { sitio } from '../config/sitio';
     flex-shrink: 0;
   }
   .marca img {
-    width: 44px;
-    height: 54px;
+    width: 40px;
+    height: 49px;
     object-fit: contain;
   }
-  .marca span {
-    max-width: 115px;
-    font-size: var(--text-xs);
-    font-weight: 600;
+  .marca--overlay img {
+    filter: drop-shadow(0 2px 8px rgba(11, 43, 33, 0.45));
+  }
+  .marca-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .marca-nombre {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: var(--esmeralda-900);
+    white-space: nowrap;
+  }
+  .marca-descriptor {
+    font-size: 0.5625rem;
+    font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    line-height: 1.45;
-    color: var(--esmeralda-900);
+    line-height: 1.2;
+    color: var(--tierra-700);
+    white-space: nowrap;
+  }
+  .marca--overlay .marca-nombre {
+    color: var(--blanco);
+    text-shadow: 0 1px 8px rgba(11, 43, 33, 0.45);
+  }
+  .marca--overlay .marca-descriptor {
+    color: var(--beis-100);
+    opacity: 0.88;
   }
   @media (min-width: 1024px) {
     .marca img {
-      width: 50px;
-      height: 61px;
+      width: 44px;
+      height: 54px;
     }
   }
-  @media (max-width: 767px) {
-    .marca span {
+  @media (max-width: 639px) {
+    .marca-descriptor {
       display: none;
+    }
+    .marca-nombre {
+      font-size: 0.9375rem;
+      letter-spacing: 0.12em;
     }
   }
 </style>

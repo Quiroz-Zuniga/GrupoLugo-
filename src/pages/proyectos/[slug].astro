@@ -198,8 +198,9 @@ const galeriaItems = await Promise.all(
   .hero-section {
     background: var(--esmeralda-900);
     color: var(--blanco);
-    padding-block: var(--s-12) var(--s-16);
-    min-height: 440px;
+    padding-top: calc(var(--header-height) + var(--s-12));
+    padding-bottom: var(--s-16);
+    min-height: 520px;
     display: flex;
     align-items: center;
     position: relative;
@@ -322,13 +323,25 @@ const galeriaItems = await Promise.all(
     padding-block: var(--s-16);
   }
   .section-header {
-    margin-bottom: var(--s-8);
+    margin-bottom: var(--s-12);
+  }
+  .section-header .eyebrow,
+  .about-content .eyebrow {
+    color: var(--terracota-700);
+  }
+  .section h2,
+  .cta-content h2 {
+    font-family: var(--font-hero);
+    font-size: clamp(2.05rem, 3.3vw, 2.9rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
   }
   .section-lead {
     font-size: var(--text-body);
     color: var(--tierra-700);
-    margin-top: var(--s-2);
-    max-width: 65ch;
+    margin-top: var(--s-3);
+    max-width: 62ch;
   }
 
   /* APARTADO 2: SOBRE EL PROYECTO */
@@ -493,12 +506,22 @@ const galeriaItems = await Promise.all(
   }
 
   @media (min-width: 1024px) {
+    .section {
+      padding-block: var(--s-24);
+    }
     .about-grid {
-      grid-template-columns: 1.6fr 1fr;
-      gap: var(--s-12);
+      grid-template-columns: 1.55fr 1fr;
+      gap: var(--s-16);
     }
     .features-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(6, 1fr);
+    }
+    .feature-card {
+      grid-column: span 2;
+    }
+    .feature-card:nth-child(4):nth-last-child(2),
+    .feature-card:nth-child(5):last-child {
+      grid-column: span 3;
     }
     .cta-inner {
       grid-template-columns: 1.8fr 1fr;

@@ -22,31 +22,62 @@ const { contenido } = Astro.props;
   .purpose {
     background: var(--beis-50);
     padding-block: var(--s-16);
+    border-bottom: 1px solid var(--almendra-200);
+  }
+  .purpose .eyebrow {
+    color: var(--terracota-700);
   }
   h2 {
-    max-width: 650px;
+    font-family: var(--font-hero);
+    font-size: clamp(2.1rem, 3.4vw, 3rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--esmeralda-900);
+    max-width: 24ch;
   }
   .purpose-grid {
     display: grid;
-    gap: var(--s-8);
-    margin-top: var(--s-8);
+    gap: var(--s-6);
+    margin-top: var(--s-12);
   }
   article {
-    border-top: 1px solid var(--almendra-400);
-    padding-top: var(--s-6);
+    background: var(--blanco);
+    border: 1px solid var(--almendra-200);
+    border-top: 3px solid var(--esmeralda-700);
+    border-radius: 12px;
+    padding: var(--s-8);
+    box-shadow: 0 6px 20px rgba(58, 42, 29, 0.04);
+    transition:
+      transform var(--transition) cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow var(--transition) ease;
+  }
+  article:nth-child(2) {
+    border-top-color: var(--olivo-600);
+  }
+  article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(11, 43, 33, 0.08);
   }
   h3 {
-    color: var(--esmeralda-700);
-    font-size: 1.35rem;
+    font-family: var(--font-hero);
+    color: var(--esmeralda-900);
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.15;
   }
   article p {
     margin-top: var(--s-4);
-    max-width: 60ch;
+    color: var(--tierra-900);
+    line-height: 1.7;
+    max-width: 58ch;
   }
   @media (min-width: 768px) {
+    .purpose {
+      padding-block: var(--s-24);
+    }
     .purpose-grid {
       grid-template-columns: 1fr 1fr;
-      gap: var(--s-16);
+      gap: var(--s-8);
     }
   }
 </style>
