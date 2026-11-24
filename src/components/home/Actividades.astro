@@ -16,7 +16,7 @@ const { contenido } = Astro.props;
     <h2 id="titulo-actividades">{contenido.titulo}</h2>
     <div class="activities-grid">
       {contenido.items.map((item) => (
-        <article>
+        <article class="anim-reveal">
           <Icono nombre={item.icono} />
           <h3>{item.titulo}</h3>
           <p>{item.texto}</p>
@@ -40,6 +40,10 @@ const { contenido } = Astro.props;
     height: 36px;
     color: var(--esmeralda-700);
     margin-bottom: var(--s-4);
+    transition: transform var(--transition) cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  article:hover :global(svg) {
+    transform: translateY(-2px) scale(1.05);
   }
   h3 {
     font-size: 1.125rem;

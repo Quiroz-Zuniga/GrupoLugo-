@@ -305,12 +305,13 @@ Esta sección reemplaza el alcance de §16. La primera landing es institucional 
 
 Solicitud del usuario (noviembre 2026):
 
-- **Navegación unificada:** Header inspirado en el modelo de Celaque (`celaque.net`), donde todas las residenciales/desarrollos se encuentran disponibles directamente en el navbar común para todo el sitio.
+- **Navegación unificada y sincronizada:** Header con barra en una sola línea (Inicio, Nosotros, Proyectos como menú desplegable con miniaturas, Actividades, Valores y CTA Contáctanos) y pie de página sincronizados automáticamente desde la colección `proyectos`, mostrando el nombre real de las 8 residenciales y enlazando a su ruta `/proyectos/<slug>`.
+- **Imágenes de referencia en headers:** Cada residencial cuenta con una imagen ilustrativa de referencia (`hero.jpg`) en su Apartado 1 (Portada/Hero) y en el catálogo `/proyectos`, con degradado esmeralda para legibilidad AA y etiqueta explícita de imagen de referencia pendiente de fotografía real.
 - **8 páginas de residenciales:** Rutas `/proyectos/residencial-1` a `/proyectos/residencial-8`, además del catálogo de proyectos en `/proyectos`.
 - **Estructura de maqueta sin datos inventados:** Cada landing de residencial sigue una arquitectura dividida estrictamente en apartados:
   - Apartado 1: Portada (Hero con titular, zona referencial, badge de estado y acción).
   - Apartado 2: Sobre el proyecto (concepto y descripción de la maqueta).
   - Apartado 3: Características (5 atributos descriptivos de apartado con íconos).
-  - Apartado 4: Galería (4 espacios de maqueta para planos y material visual).
+  - Apartado 4: Galería (espacios de maqueta ilustrativa con imágenes optimizadas y ampliación mediante lightbox accesible en isla React `GaleriaLightbox`).
   - Apartado 5: Contacto (CTA con enlace de consulta por WhatsApp con mensaje prellenado por residencial).
 - **Consistencia técnica:** Content Collections validadas con Zod (`proyectos`), plantilla única en `src/pages/proyectos/[slug].astro`, soporte responsivo (escritorio y menú colapsable en móvil), contraste accesible y 0 errores en build/check/lint.

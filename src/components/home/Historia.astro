@@ -14,7 +14,7 @@ const { contenido } = Astro.props;
     </div>
     <div class="history-stages">
       {contenido.etapas.map((etapa) => (
-        <article>
+        <article class="anim-reveal">
           <h3>{etapa.titulo}</h3>
           <p>{etapa.texto}</p>
         </article>

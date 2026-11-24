@@ -6,6 +6,8 @@
   "zona": "Danlí",
   "ubicacion": "El Pescadero, Danlí, Honduras",
   "estado": "disponible",
+  "hero": "../../assets/proyectos/residencial-1/hero.jpg",
+  "heroAlt": "Imagen ilustrativa de referencia del acceso y entorno natural de Residencial Ciudad Victoria en El Pescadero, Danlí",
   "apartado1": {
     "etiqueta": "Proyectos / Danlí",
     "titulo": "Residencial Ciudad Victoria",
@@ -59,27 +61,37 @@
       {
         "numero": "4.1",
         "titulo": "Entrada principal",
-        "texto": "Conoce el acceso principal de Residencial Ciudad Victoria."
+        "texto": "Conoce el acceso principal de Residencial Ciudad Victoria.",
+        "imagen": "../../assets/proyectos/residencial-1/galeria-1.jpg",
+        "alt": "Maqueta ilustrativa de la entrada principal de Residencial Ciudad Victoria"
       },
       {
         "numero": "4.2",
         "titulo": "Calles y avenidas",
-        "texto": "Espacios de circulación y acceso dentro del residencial."
+        "texto": "Espacios de circulación y acceso dentro del residencial.",
+        "imagen": "../../assets/proyectos/residencial-1/galeria-2.jpg",
+        "alt": "Maqueta ilustrativa de calles pavimentadas y avenidas de Residencial Ciudad Victoria"
       },
       {
         "numero": "4.3",
         "titulo": "Vista aérea",
-        "texto": "Conoce la distribución y extensión del proyecto."
+        "texto": "Conoce la distribución y extensión del proyecto.",
+        "imagen": "../../assets/proyectos/residencial-1/galeria-3.jpg",
+        "alt": "Maqueta ilustrativa de vista aérea de lotes y calles en Residencial Ciudad Victoria"
       },
       {
         "numero": "4.4",
         "titulo": "Áreas recreativas",
-        "texto": "Espacios verdes para disfrutar en familia."
+        "texto": "Espacios verdes para disfrutar en familia.",
+        "imagen": "../../assets/proyectos/residencial-1/galeria-4.jpg",
+        "alt": "Maqueta ilustrativa de áreas recreativas y parque verde en Residencial Ciudad Victoria"
       },
       {
         "numero": "4.5",
         "titulo": "Entorno natural",
-        "texto": "Disfruta de la tranquilidad y los paisajes de la zona."
+        "texto": "Disfruta de la tranquilidad y los paisajes de la zona.",
+        "imagen": "../../assets/proyectos/residencial-1/galeria-5.jpg",
+        "alt": "Maqueta ilustrativa del entorno natural y montañas de El Paraíso alrededor del proyecto"
       }
     ]
   },
@@ -91,7 +103,7 @@
     "boton": "Enviar mensaje por WhatsApp"
   },
   "seo": {
-  "title": "Residencial Ciudad Victoria | Grupo Lugo",
-  "description": "Conoce Residencial Ciudad Victoria en El Pescadero, Danlí. Descubre el proyecto y solicita información a Grupo Lugo."
+    "title": "Residencial Ciudad Victoria | Grupo Lugo",
+    "description": "Conoce Residencial Ciudad Victoria en El Pescadero, Danlí. Descubre el proyecto y solicita información a Grupo Lugo."
   }
 }

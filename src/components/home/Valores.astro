@@ -11,7 +11,7 @@ const { contenido } = Astro.props;
     <h2 id="titulo-valores">{contenido.titulo}</h2>
     <ul>
       {contenido.items.map((valor) => (
-        <li>
+        <li class="anim-reveal">
           <span aria-hidden="true">↗</span>
           {valor}
         </li>
@@ -39,9 +39,20 @@ const { contenido } = Astro.props;
     padding-block: var(--s-4);
     font-weight: 500;
     line-height: 1.5;
+    transition:
+      border-color var(--transition),
+      padding-left var(--transition) cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  li:hover {
+    border-top-color: var(--esmeralda-700);
+    padding-left: var(--s-2);
   }
   li span {
     color: var(--terracota-700);
+    transition: transform var(--transition) cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  li:hover span {
+    transform: translate(2px, -2px);
   }
   @media (min-width: 480px) {
     ul {

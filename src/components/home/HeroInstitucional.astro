@@ -8,16 +8,18 @@ const { contenido } = Astro.props;
 <section id="inicio" class="institutional-hero" aria-labelledby="titulo-inicio">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow">{contenido.etiqueta}</span>
-      <h1 id="titulo-inicio">{sitio.nombre}</h1>
-      <p class="hero-title">{contenido.titulo}</p>
-      <p class="hero-description">{contenido.descripcion}</p>
-      <a class="button" href="#nosotros">
+      <span class="eyebrow anim-hero">{contenido.etiqueta}</span>
+      <h1 id="titulo-inicio" class="anim-hero-delay-1">
+        {sitio.nombre}
+      </h1>
+      <p class="hero-title anim-hero-delay-1">{contenido.titulo}</p>
+      <p class="hero-description anim-hero-delay-2">{contenido.descripcion}</p>
+      <a class="button anim-hero-delay-3" href="#nosotros">
         {contenido.boton}
         <span aria-hidden="true">↗</span>
       </a>
     </div>
-    <div class="hero-identity">
+    <div class="hero-identity anim-hero-delay-2">
       <Image
         src={logo}
         alt={sitio.etiquetas.logoAlt}

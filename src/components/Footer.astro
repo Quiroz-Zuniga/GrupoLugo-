@@ -1,7 +1,12 @@
 ---
 import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
 import logo from '../assets/logo/grupo-lugo-transparente.png';
 import { sitio } from '../config/sitio';
+
+const residenciales = (await getCollection('proyectos'))
+  .filter((p) => p.data.publicado)
+  .sort((a, b) => a.data.orden - b.data.orden);
 ---
 
 <footer class="footer dark">
@@ -19,14 +24,15 @@ import { sitio } from '../config/sitio';
       <div>
         <h2>{sitio.etiquetas.residenciales}</h2>
         <nav aria-label="Residenciales en pie de página">
-          {sitio.residenciales.map((res) => (
-            <a href={res.href}>{res.texto}</a>
+          {residenciales.map((res) => (
+            <a href={`/proyectos/${res.data.slug}`}>{res.data.nombre}</a>
           ))}
         </nav>
       </div>
       <div>
         <h2>{sitio.etiquetas.navegacion}</h2>
         <nav aria-label="Pie de página">
+          <a href="/proyectos">{sitio.etiquetas.verTodosProyectos}</a>
           {sitio.menu.map((item) => (
             <a href={item.href}>{item.texto}</a>
           ))}

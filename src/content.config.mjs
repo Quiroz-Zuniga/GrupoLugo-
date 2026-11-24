@@ -64,78 +64,88 @@ const institucional = defineCollection({
 
 const proyectos = defineCollection({
   loader: glob({ pattern: '**/*.json', base: './src/content/proyectos' }),
-  schema: z.object({
-    slug: z.string(),
-    nombre: z.string(),
-    orden: z.number(),
-    publicado: z.boolean(),
-    zona: z.string(),
-    ubicacion: z.string(),
-    estado: z.enum(['disponible', 'ultimos-lotes', 'proximamente', 'vendido']),
-    apartado1: z.object({
-      etiqueta: z.string(),
-      titulo: z.string(),
-      subtitulo: z.string(),
+  schema: ({ image }) =>
+    z.object({
+      slug: z.string(),
+      nombre: z.string(),
+      orden: z.number(),
+      publicado: z.boolean(),
+      zona: z.string(),
       ubicacion: z.string(),
-      estadoTexto: z.string(),
-      botonCta: z.string(),
+      estado: z.enum([
+        'disponible',
+        'ultimos-lotes',
+        'proximamente',
+        'vendido',
+      ]),
+      hero: image(),
+      heroAlt: z.string(),
+      apartado1: z.object({
+        etiqueta: z.string(),
+        titulo: z.string(),
+        subtitulo: z.string(),
+        ubicacion: z.string(),
+        estadoTexto: z.string(),
+        botonCta: z.string(),
+      }),
+      apartado2: z.object({
+        etiqueta: z.string(),
+        titulo: z.string(),
+        descripcion: z.string(),
+        frase: z.string().optional(),
+      }),
+      apartado3: z.object({
+        etiqueta: z.string(),
+        titulo: z.string(),
+        items: z
+          .array(
+            z.object({
+              icono: z.enum([
+                'pin',
+                'shield',
+                'tree',
+                'road',
+                'people',
+                'whatsapp',
+                'leaf',
+                'arrow',
+              ]),
+              titulo: z.string(),
+              texto: z.string(),
+            }),
+          )
+          .min(3)
+          .max(6),
+      }),
+      apartado4: z.object({
+        etiqueta: z.string(),
+        titulo: z.string(),
+        descripcion: z.string(),
+        items: z
+          .array(
+            z.object({
+              numero: z.string(),
+              titulo: z.string(),
+              texto: z.string(),
+              imagen: image(),
+              alt: z.string(),
+            }),
+          )
+          .min(3)
+          .max(8),
+      }),
+      apartado5: z.object({
+        etiqueta: z.string(),
+        pregunta: z.string(),
+        titulo: z.string(),
+        texto: z.string(),
+        boton: z.string(),
+      }),
+      seo: z.object({
+        title: z.string().max(75),
+        description: z.string().max(160),
+      }),
     }),
-    apartado2: z.object({
-      etiqueta: z.string(),
-      titulo: z.string(),
-      descripcion: z.string(),
-      frase: z.string().optional(),
-    }),
-    apartado3: z.object({
-      etiqueta: z.string(),
-      titulo: z.string(),
-      items: z
-        .array(
-          z.object({
-            icono: z.enum([
-              'pin',
-              'shield',
-              'tree',
-              'road',
-              'people',
-              'whatsapp',
-              'leaf',
-              'arrow',
-            ]),
-            titulo: z.string(),
-            texto: z.string(),
-          }),
-        )
-        .min(3)
-        .max(6),
-    }),
-    apartado4: z.object({
-      etiqueta: z.string(),
-      titulo: z.string(),
-      descripcion: z.string(),
-      items: z
-        .array(
-          z.object({
-            numero: z.string(),
-            titulo: z.string(),
-            texto: z.string(),
-          }),
-        )
-        .min(3)
-        .max(8),
-    }),
-    apartado5: z.object({
-      etiqueta: z.string(),
-      pregunta: z.string(),
-      titulo: z.string(),
-      texto: z.string(),
-      boton: z.string(),
-    }),
-    seo: z.object({
-      title: z.string().max(75),
-      description: z.string().max(160),
-    }),
-  }),
 });
 
 export const collections = { institucional, proyectos };

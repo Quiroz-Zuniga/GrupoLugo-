@@ -1,4 +1,3 @@
-
 {
   "slug": "residencial-3",
   "nombre": "Residencial Valle Verde",
@@ -7,6 +6,8 @@
   "zona": "Danlí",
   "ubicacion": "El Pescadero, Danlí, frente al Centro de Rehabilitación Eliasid",
   "estado": "ultimos-lotes",
+  "hero": "../../assets/proyectos/residencial-3/hero.jpg",
+  "heroAlt": "Imagen ilustrativa de referencia del valle y lotes de Residencial Valle Verde en El Pescadero, Danlí",
   "apartado1": {
     "etiqueta": "Proyectos / Danlí",
     "titulo": "Residencial Valle Verde",
@@ -60,27 +61,37 @@
       {
         "numero": "01",
         "titulo": "Entrada principal",
-        "texto": "Conoce el acceso a Residencial Valle Verde."
+        "texto": "Conoce el acceso a Residencial Valle Verde.",
+        "imagen": "../../assets/proyectos/residencial-3/hero.jpg",
+        "alt": "Maqueta ilustrativa del acceso principal a Residencial Valle Verde en El Pescadero, Danlí"
       },
       {
         "numero": "02",
         "titulo": "Calles y avenidas",
-        "texto": "Conoce las vías de acceso y circulación del proyecto."
+        "texto": "Conoce las vías de acceso y circulación del proyecto.",
+        "imagen": "../../assets/proyectos/residencial-2/hero.jpg",
+        "alt": "Maqueta ilustrativa de vías de acceso balastreadas en entorno verde"
       },
       {
         "numero": "03",
         "titulo": "Distribución de los lotes",
-        "texto": "Descubre la distribución de nuestro proyecto."
+        "texto": "Descubre la distribución de nuestro proyecto.",
+        "imagen": "../../assets/proyectos/residencial-2/galeria-3.jpg",
+        "alt": "Maqueta ilustrativa de distribución de lotes y calles internas"
       },
       {
         "numero": "04",
         "titulo": "Áreas verdes",
-        "texto": "Un entorno agradable para disfrutar de la tranquilidad."
+        "texto": "Un entorno agradable para disfrutar de la tranquilidad.",
+        "imagen": "../../assets/proyectos/residencial-1/galeria-4.jpg",
+        "alt": "Maqueta ilustrativa de áreas verdes y espacios tranquilos"
       },
       {
         "numero": "05",
         "titulo": "Entorno natural",
-        "texto": "Conoce el entorno que rodea el residencial."
+        "texto": "Conoce el entorno que rodea el residencial.",
+        "imagen": "../../assets/proyectos/residencial-1/galeria-5.jpg",
+        "alt": "Maqueta ilustrativa del paisaje natural en El Pescadero, Danlí"
       }
     ]
   },

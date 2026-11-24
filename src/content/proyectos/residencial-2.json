@@ -1,4 +1,3 @@
-
 {
   "slug": "residencial-2",
   "nombre": "Residencial Colinas del Paraíso",
@@ -7,6 +6,8 @@
   "zona": "Danlí",
   "ubicacion": "El Pescadero, Danlí, frente a Café Uno, Honduras",
   "estado": "disponible",
+  "hero": "../../assets/proyectos/residencial-2/hero.jpg",
+  "heroAlt": "Imagen ilustrativa de referencia de colinas verdes y calles de acceso en Residencial Colinas del Paraíso, Danlí",
   "apartado1": {
     "etiqueta": "Proyectos / Danlí",
     "titulo": "Residencial Colinas del Paraíso",
@@ -60,27 +61,37 @@
       {
         "numero": "4.1",
         "titulo": "Entrada principal",
-        "texto": "Conoce el acceso principal de nuestro residencial."
+        "texto": "Conoce el acceso principal de nuestro residencial.",
+        "imagen": "../../assets/proyectos/residencial-1/galeria-1.jpg",
+        "alt": "Maqueta ilustrativa de referencia del acceso principal para Residencial Colinas del Paraíso"
       },
       {
         "numero": "4.2",
         "titulo": "Calles y avenidas",
-        "texto": "Conoce las calles balastreadas y vías de acceso."
+        "texto": "Conoce las calles balastreadas y vías de acceso.",
+        "imagen": "../../assets/proyectos/residencial-2/hero.jpg",
+        "alt": "Maqueta ilustrativa de calles balastreadas y colinas en Residencial Colinas del Paraíso"
       },
       {
         "numero": "4.3",
         "titulo": "Vista aérea",
-        "texto": "Conoce la distribución y extensión del proyecto."
+        "texto": "Conoce la distribución y extensión del proyecto.",
+        "imagen": "../../assets/proyectos/residencial-2/galeria-3.jpg",
+        "alt": "Maqueta ilustrativa de vista aérea en colinas de Residencial Colinas del Paraíso"
       },
       {
         "numero": "4.4",
         "titulo": "Áreas recreativas",
-        "texto": "Espacios verdes para disfrutar en familia."
+        "texto": "Espacios verdes para disfrutar en familia.",
+        "imagen": "../../assets/proyectos/residencial-1/galeria-4.jpg",
+        "alt": "Maqueta ilustrativa de referencia de áreas verdes recreativas"
       },
       {
         "numero": "4.5",
         "titulo": "Entorno natural",
-        "texto": "Disfruta de la tranquilidad y los paisajes de la zona."
+        "texto": "Disfruta de la tranquilidad y los paisajes de la zona.",
+        "imagen": "../../assets/proyectos/residencial-1/galeria-5.jpg",
+        "alt": "Maqueta ilustrativa del entorno natural montañoso de Danlí"
       }
     ]
   },
@@ -96,4 +107,3 @@
     "description": "Conoce Colinas del Paraíso en El Pescadero, Danlí, frente a Café Uno. Descubre el proyecto y solicita información a Grupo Lugo."
   }
 }
-
